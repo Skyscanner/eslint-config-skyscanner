@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-skyscanner",
-  "version": "0.0.3-0",
+  "version": "1.0.0",
   "description": "Skyscanner's ESLint config.",
   "main": "index.js",
   "repository": {
