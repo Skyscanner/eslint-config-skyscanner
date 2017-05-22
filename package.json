@@ -9,6 +9,14 @@
   },
   "author": "Matthew Davidson <matthew.davidson@skyscanner.net>",
   "license": "Apache-2.0",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "skyscanner",
+    "javascript",
+    "styleguide"
+  ],
   "peerDependencies": {
     "eslint": "^3.17.1",
     "eslint-config-airbnb": "^14.1.0",
@@ -20,6 +28,7 @@
     "np": "^2.10.0"
   },
   "scripts": {
-    "publish": "np"
+    "publish": "np",
+    "test": "(cd test && npm install && npm test)"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "name": "eslint-config-skyscanner-test",
+  "version": "0.0.0",
+  "description": "Test fixture",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@git.prod.skyscanner.local:backpack/eslint-config-skyscanner.git"
+  },
+  "author": "Matthew Davidson <matthew.davidson@skyscanner.net>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint-config-skyscanner": "../",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0"
+  },
+  "scripts": {
+    "test:pass": "echo 'Expecting pass' && eslint pass.jsx",
+    "test:jsdoc": "echo 'Expecting failure' && eslint jsdoc-fail.js; if [[ $? -eq 1 ]]; then exit 0; fi",
+    "test": "npm run test:pass && npm run test:jsdoc"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4"
+  }
+}
