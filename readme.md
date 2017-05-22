@@ -1,5 +1,7 @@
 # eslint-config-skyscanner
 
+[![Build Status](https://travis-ci.org/Skyscanner/eslint-config-skyscanner.svg?branch=master)](https://travis-ci.org/Skyscanner/eslint-config-skyscanner)
+
 This package includes the shareable ESLint configuration used by Skyscanner.
 
 ## Usage
