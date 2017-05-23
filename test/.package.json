@@ -2,12 +2,12 @@
   "name": "eslint-config-skyscanner-test",
   "version": "0.0.0",
   "description": "Test fixture",
-  "main": "index.js",
+  "main": "e2e-test.sh",
   "repository": {
     "type": "git",
-    "url": "git@git.prod.skyscanner.local:backpack/eslint-config-skyscanner.git"
+    "url": "https://github.com/Skyscanner/eslint-config-skyscanner"
   },
-  "author": "Matthew Davidson <matthew.davidson@skyscanner.net>",
+  "author": "Tim von Oldenburg <tim.vonoldenburg@skyscanner.net>",
   "license": "Apache-2.0",
   "devDependencies": {
     "eslint-config-skyscanner": "../"

@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@git.prod.skyscanner.local:backpack/eslint-config-skyscanner.git"
+    "url": "https://github.com/Skyscanner/eslint-config-skyscanner"
   },
   "author": "Matthew Davidson <matthew.davidson@skyscanner.net>",
   "license": "Apache-2.0",
