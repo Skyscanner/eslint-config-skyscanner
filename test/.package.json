@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test:pass": "echo 'Expecting pass' && eslint pass.jsx",
-    "test:jsdoc": "echo 'Expecting failure' && eslint jsdoc-fail.js; if [[ $? -eq 1 ]]; then exit 0; fi",
+    "test:jsdoc": "echo 'Expecting failure' && eslint jsdoc-fail.js; if [ $? -eq 1 ]; then exit 0; fi",
     "test": "npm run test:pass && npm run test:jsdoc"
   },
   "dependencies": {
