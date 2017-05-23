@@ -29,6 +29,6 @@
   },
   "scripts": {
     "publish": "np",
-    "test": "(cd test && npm install && npm test)"
+    "test": "(cd test && ./e2e-test.sh)"
   }
 }

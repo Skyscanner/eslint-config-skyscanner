@@ -10,12 +10,7 @@
   "author": "Matthew Davidson <matthew.davidson@skyscanner.net>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "eslint-config-skyscanner": "../",
-    "eslint": "^3.17.1",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0"
+    "eslint-config-skyscanner": "../"
   },
   "scripts": {
     "test:pass": "echo 'Expecting pass' && eslint pass.jsx",
