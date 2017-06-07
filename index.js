@@ -12,6 +12,7 @@
  */
 
 module.exports = {
+  parser: 'babel-eslint',
   extends: 'airbnb',
   rules: {
     'valid-jsdoc': ['error']
