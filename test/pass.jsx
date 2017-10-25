@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Banner extends Component {
-    /**
+  /**
    * Represents a book.
    * @constructor
    * @param {string} title - The title of the book.
@@ -11,9 +11,7 @@ class Banner extends Component {
   constructor() {
     super();
 
-    this.state = {
-      key: 'value',
-    };
+    this.state = {};
   }
 
   render() {

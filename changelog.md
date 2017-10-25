@@ -2,8 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/) 
+The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
+
+## 3.0.0 - Upgraded `esling-config-airbnb peer dependencies`
+### Changed
+- Upgraded the following peer dependencies:
+ - babel-eslint:           `^7.2.3` -> `^8.0.1`
+ - eslint:                 `^3.17.1` -> `^4.9.0`
+ - eslint-config-airbnb:   `^14.1.0` -> `^16.1.0`
+ - eslint-plugin-import:   `^2.2.0`  -> `^2.8.0`
+ - eslint-plugin-jsx-a11y: `^4.0.0`  -> `^6.0.2`
+ - eslint-plugin-react:    `^6.10.0` -> `^7.4.0`
 
 ## 2.0.0 - Changed parser to `babel-eslint`
 ## Changed

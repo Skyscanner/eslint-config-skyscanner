@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-skyscanner",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Skyscanner's ESLint config.",
   "main": "index.js",
   "repository": {
@@ -18,15 +18,12 @@
     "styleguide"
   ],
   "peerDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^3.17.1",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0"
-  },
-  "devDependencies": {
-    "np": "^2.10.0"
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
   },
   "scripts": {
     "publish": "np",
