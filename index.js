@@ -17,28 +17,21 @@ module.exports = {
   rules: {
     'valid-jsdoc': ['error'],
 
-    // We've decided we don't want this for now as it makes writing JSX more painful.
+    // Disabled whilst incompatibilities still exist with react/jsx-closing-tag-location, react/jsx-indent & max-len.
     // See https://github.com/airbnb/javascript/issues/1584#issuecomment-335667272
     "function-paren-newline": 0,
 
-    // False positive on custom propTypes + isRequired. https://github.com/yannickcr/eslint-plugin-react/issues/1389
+    // Disabled whilst false positives still exist with custom propTypes + isRequired.
+    // See https://github.com/yannickcr/eslint-plugin-react/issues/1389
     "react/no-typos": 0,
 
+    // Added 'to' as a specialLink property, which prevents react-router's
+    // 'Link' component from triggering this rule.
     // See https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/339
     "jsx-a11y/anchor-is-valid": ["error", {
       "components": ["Link"],
       "specialLink": ["to"],
       "aspects": ["noHref", "invalidHref", "preferButton"],
-    }],
-
-    // See https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/282
-    // We should probably change our code to adhere to the standard here.
-    "jsx-a11y/label-has-for": [ 2, {
-      "components": [ "Label" ],
-      "required": {
-          "some": [ "nesting", "id" ]
-      },
-      "allowChildren": false
     }]
   }
 };
