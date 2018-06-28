@@ -1,3 +1,7 @@
 {
-  "extends": "skyscanner"
+  "extends": "skyscanner",
+  "plugins": ["backpack"],
+  "rules": {
+      "backpack/use-tokens": 2
+  }
 }
