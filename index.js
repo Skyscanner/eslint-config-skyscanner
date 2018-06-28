@@ -14,8 +14,10 @@
 module.exports = {
   parser: 'babel-eslint',
   extends: 'airbnb',
+  plugins: ["backpack"],
   rules: {
     'valid-jsdoc': ['error'],
+    "backpack/use-tokens": 2,
 
     // Disabled whilst incompatibilities still exist with react/jsx-closing-tag-location, react/jsx-indent & max-len.
     // See https://github.com/airbnb/javascript/issues/1584#issuecomment-335667272
