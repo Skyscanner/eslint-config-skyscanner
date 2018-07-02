@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+# Unreleased
+#### Major
+ - Added support for [backpack plugin](https://github.com/Skyscanner/eslint-plugin-backpack)
+
 ## 3.0.0 - Upgraded `esling-config-airbnb peer dependencies`
 
 ### Changed

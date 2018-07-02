@@ -14,16 +14,18 @@
 module.exports = {
   parser: 'babel-eslint',
   extends: 'airbnb',
+  plugins: ['backpack'],
   rules: {
     'valid-jsdoc': ['error'],
+    "backpack/use-tokens": 'error',
 
     // Disabled whilst incompatibilities still exist with react/jsx-closing-tag-location, react/jsx-indent & max-len.
     // See https://github.com/airbnb/javascript/issues/1584#issuecomment-335667272
-    "function-paren-newline": 0,
+    "function-paren-newline": 'off',
 
     // Disabled whilst false positives still exist with custom propTypes + isRequired.
     // See https://github.com/yannickcr/eslint-plugin-react/issues/1389
-    "react/no-typos": 0,
+    "react/no-typos": 'off',
 
     // Added 'to' as a specialLink property, which prevents react-router's
     // 'Link' component from triggering this rule.

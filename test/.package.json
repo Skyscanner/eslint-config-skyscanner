@@ -14,8 +14,9 @@
   },
   "scripts": {
     "test:pass": "echo 'Expecting pass' && eslint pass.jsx",
-    "test:jsdoc": "echo 'Expecting failure' && eslint jsdoc-fail.js; if [ $? -eq 1 ]; then exit 0; fi",
-    "test": "npm run test:pass && npm run test:jsdoc"
+    "test:fail-jsdoc": "echo 'Expecting failure' && eslint jsdoc-fail.js; if [ $? -eq 1 ]; then exit 0; fi",
+    "test:fail-bpk": "echo 'Expecting failure' && eslint bpk-token-fail.jsx; if [ $? -eq 1 ]; then exit 0; fi",
+    "test": "npm run test:pass && npm run test:fail-jsdoc && npm run test:fail-bpk"
   },
   "dependencies": {
     "prop-types": "^15.5.10",
