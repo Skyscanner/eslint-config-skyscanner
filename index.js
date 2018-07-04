@@ -17,23 +17,24 @@ module.exports = {
   plugins: ['backpack'],
   rules: {
     'valid-jsdoc': ['error'],
-    "backpack/use-tokens": 'error',
+    'backpack/use-tokens': 'error',
+    'backpack/auto-import-tokens': 'error',
 
     // Disabled whilst incompatibilities still exist with react/jsx-closing-tag-location, react/jsx-indent & max-len.
     // See https://github.com/airbnb/javascript/issues/1584#issuecomment-335667272
-    "function-paren-newline": 'off',
+    'function-paren-newline': 'off',
 
     // Disabled whilst false positives still exist with custom propTypes + isRequired.
     // See https://github.com/yannickcr/eslint-plugin-react/issues/1389
-    "react/no-typos": 'off',
+    'react/no-typos': 'off',
 
     // Added 'to' as a specialLink property, which prevents react-router's
     // 'Link' component from triggering this rule.
     // See https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/339
-    "jsx-a11y/anchor-is-valid": ["error", {
-      "components": ["Link"],
-      "specialLink": ["to"],
-      "aspects": ["noHref", "invalidHref", "preferButton"],
+    'jsx-a11y/anchor-is-valid': ['error', {
+      'components': ['Link'],
+      'specialLink': ['to'],
+      'aspects': ['noHref', 'invalidHref', 'preferButton'],
     }]
   }
 };
