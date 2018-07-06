@@ -6,8 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 # Unreleased
-#### Major
- - Added support for [backpack plugin](https://github.com/Skyscanner/eslint-plugin-backpack)
+
+### Changed
+  - Upgraded eslint-plugin-backpack: `^0.0.2` -> `^0.1.0`
+  - Added `backpack/auto-import-tokens` rule to the shared config
+
+## 4.0.0-beta.2 - Upgraded `esling-config-airbnb` peer dependencies
+
+### Changed
+  - Added support for [backpack plugin](https://github.com/Skyscanner/eslint-plugin-backpack)
 
 ## 3.0.0 - Upgraded `esling-config-airbnb peer dependencies`
 
