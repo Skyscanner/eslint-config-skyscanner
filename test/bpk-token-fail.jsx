@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Banner = props => (
+const Banner = ({ children }) => (
   <div role="banner" style={{ color: '#cbeef5' }}>
-    {props.children}
+    {children}
   </div>
 );
 
