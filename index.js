@@ -36,7 +36,7 @@ module.exports = {
      // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-one-expression-per-line.md	
      // https://github.com/airbnb/javascript/commit/b6a268f780177e03b573a4f0df95ecc0d2e8783e#diff-c0191b2bdd5bfebebb8cec31d0f3993c     
      // TODO: re-enable when an option for text children is available
--    'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-one-expression-per-line': 'off',
 
     // Added 'to' as a specialLink property, which prevents react-router's
     // 'Link' component from triggering this rule.
