@@ -18,7 +18,7 @@ module.exports = {
   rules: {
     'valid-jsdoc': ['error'],
     'backpack/use-tokens': 'error',
-    'backpack/auto-import-tokens': 'error',
+    'backpack/use-components': 'error',
 
     // This rule is purely subjective and for consistency sake.
     // The impact of turning this on outweighs our perceived benefit of enforcing it

@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 4.0.0-beta.6 - New `backpack/use-components` rule added
+### Changed
+- Removed `backpack/auto-import-tokens` rule
+- Added `backpack/use-components` rule
+
 ## 4.0.0-beta.5 - React Destructuring assignment removed
 ### Changed
 - Removed `react/destructuring-assignment` rule
