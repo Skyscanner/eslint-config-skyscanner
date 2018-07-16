@@ -8,4 +8,8 @@ echo "$PEER_DEPENDENCIES" | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm in
 npm install --no-shrinkwrap
 npm test
 
+exit_code=$?
+
 git clean -f -x -d
+
+exit $exit_code
