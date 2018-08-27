@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## UNRELEASED
+## 4.0.0-beta.9 - Upgraded `eslint-config-airbnb`
 ### Changed
 - Upgraded the following peer dependencies:
   - babel-eslint: `^8.2.5` -> `^8.2.6`
