@@ -18,13 +18,13 @@
     "styleguide"
   ],
   "peerDependencies": {
-    "babel-eslint": "^8.2.5",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^17.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jsx-a11y": "^6.1.0",
-    "eslint-plugin-react": "^7.10.0",
-    "eslint-plugin-backpack": "^0.2.0"
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-backpack": "^0.2.2"
   },
   "scripts": {
     "test": "(cd test && ./e2e-test.sh)"
