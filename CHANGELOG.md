@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## UNRELEASED
+### Changed
+- Upgraded the following peer dependencies:
+  - babel-eslint: `^8.2.5` -> `^8.2.6`
+  - [eslint](https://github.com/eslint/eslint/blob/master/CHANGELOG.md): `^4.19.1` -> `^5.4.0`
+  - [eslint-config-airbnb](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/CHANGELOG.md): `^17.0.0` -> `^17.1.0`
+  - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import/blob/master/CHANGELOG.md): `^2.13.0` -> `^2.14.0`
+  - [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/CHANGELOG.md): `^6.1.0` -> `^6.1.1`
+  - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md): `^7.10.0` -> `^7.11.1`
+  - [eslint-plugin-backpack](https://github.com/Skyscanner/eslint-plugin-backpack/blob/master/changelog.md): `^0.2.0` -> `^0.2.2`
+- Relaxed the rule for `jsx-a11y/label-has-associated-control` to only assert `either` as opposed to `both`.
+
 ## 4.0.0-beta.8 - Disabled `react/jsx-one-expression-per-line` 
 ### Changed
 - Disabled `react/jsx-one-expression-per-line`, temporarilly - https://github.com/airbnb/javascript/commit/b6a268f780177e03b573a4f0df95ecc0d2e8783e#diff-c0191b2bdd5bfebebb8cec31d0f3993c
@@ -26,9 +38,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - [eslint](https://github.com/eslint/eslint/blob/master/CHANGELOG.md): `^4.9.0` -> `^4.19.1`
   - [eslint-config-airbnb](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/CHANGELOG.md): `^16.1.0` -> `^17.0.0`
   - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import/blob/master/CHANGELOG.md): `^2.8.0` -> `^2.10.0`
-  - [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/CHANGELOG.md): -> `^6.0.2` -> `^6.1.0`
-  - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md): -> `^7.4.0` -> `^7.10.0`
-  - [eslint-plugin-backpack](https://github.com/Skyscanner/eslint-plugin-backpack/blob/master/changelog.md): -> `^0.0.2` -> `^0.1.0`
+  - [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/CHANGELOG.md): `^6.0.2` -> `^6.1.0`
+  - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md): `^7.4.0` -> `^7.10.0`
+  - [eslint-plugin-backpack](https://github.com/Skyscanner/eslint-plugin-backpack/blob/master/changelog.md): `^0.0.2` -> `^0.1.0`
 
 ## 4.0.0-beta.3 - Auto-import Backpack tokens
 
@@ -53,11 +65,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md): `^6.10.0` -> `^7.4.0`
 
 ## 2.0.0 - Changed parser to `babel-eslint`
-## Changed
+### Changed
 - Changed parser to `babel-eslint` to support dynamic `import()` statements used with Webpack 2
 
 ## 1.1.0 - Add JSDoc validation
-### Changed
+### Added
 - Validate JSDoc (when present)
 
 ## 1.0.0 - Upgraded airbnb config to v14
