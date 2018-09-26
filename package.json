@@ -7,6 +7,10 @@
     "type": "git",
     "url": "https://github.com/Skyscanner/eslint-config-skyscanner"
   },
+  "engines": {
+    "node": "^8.9.0",
+    "npm": "^6.4.1"
+  },
   "author": "Matthew Davidson <matthew.davidson@skyscanner.net>",
   "license": "Apache-2.0",
   "keywords": [
@@ -27,6 +31,7 @@
     "eslint-plugin-backpack": "^0.2.2"
   },
   "scripts": {
+    "pretest": "npx ensure-node-env",
     "test": "(cd test && ./e2e-test.sh)"
   }
 }
