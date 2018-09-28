@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 4.0.0-beta.10 - Upgraded `babel-eslint`
+
+### Changed
+- Upgraded the following peer dependencies:
+  - [babel-eslint](https://github.com/babel/babel-eslint/releases): `^8.2.6` -> `^10.0.0`
+  - [eslint](https://github.com/eslint/eslint/blob/master/CHANGELOG.md): `^5.4.0` -> `^5.6.0`
+
 ## 4.0.0-beta.9 - Upgraded `eslint-config-airbnb`
 ### Changed
 - Upgraded the following peer dependencies:
