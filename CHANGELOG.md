@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+_Nothing yet..._
+
+## 4.0.0-beta.11 - Upgraded dependencies
+
 ### Changed
 - Upgraded the following peer dependencies:
   - [babel-eslint](https://github.com/babel/babel-eslint/releases): `^10.0.0` -> `^10.0.1`
