@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## UNRELEASED
+
+### Changed
+- Upgraded the following peer dependencies:
+  - [babel-eslint](https://github.com/babel/babel-eslint/releases): `^10.0.0` -> `^10.0.1`
+  - [eslint](https://github.com/eslint/eslint/blob/master/CHANGELOG.md): `^5.6.0` -> `^5.12.0`
+  - [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/CHANGELOG.md): `^6.1.1` -> `^6.1.2`
+  - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md): `^7.11.1` -> `^7.12.3`
+
 ## 4.0.0-beta.10 - Upgraded `babel-eslint`
 
 ### Changed
