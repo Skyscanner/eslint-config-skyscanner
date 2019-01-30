@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 _Nothing yet..._
 
+## 4.0.0
+
+Includes all changes published in the previous betas.
+
 ## 4.0.0-beta.11 - Upgraded dependencies
 
 ### Changed
@@ -37,7 +41,7 @@ _Nothing yet..._
   - [eslint-plugin-backpack](https://github.com/Skyscanner/eslint-plugin-backpack/blob/master/changelog.md): `^0.2.0` -> `^0.2.2`
 - Relaxed the rule for `jsx-a11y/label-has-associated-control` to only assert `either` as opposed to `both`.
 
-## 4.0.0-beta.8 - Disabled `react/jsx-one-expression-per-line` 
+## 4.0.0-beta.8 - Disabled `react/jsx-one-expression-per-line`
 ### Changed
 - Disabled `react/jsx-one-expression-per-line`, temporarilly - https://github.com/airbnb/javascript/commit/b6a268f780177e03b573a4f0df95ecc0d2e8783e#diff-c0191b2bdd5bfebebb8cec31d0f3993c
 
