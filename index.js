@@ -59,5 +59,15 @@ module.exports = {
       assert: 'either',
       depth: 25
     }],
+
+    // Enforce a convention in the order of require/import statements
+    // See https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
+        'newlines-between': 'always',
+      },
+    ],
   },
 };
