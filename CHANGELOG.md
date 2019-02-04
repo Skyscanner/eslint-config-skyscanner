@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 _Nothing yet..._
 
+## 5.0.0-beta.1 - Add import/order rule
+
+### Changed
+- New `import/order` rule (see [#21](https://github.com/Skyscanner/eslint-config-skyscanner/pull/21)).
+
 ## 4.0.0
 
 Includes all changes published in the previous betas.
