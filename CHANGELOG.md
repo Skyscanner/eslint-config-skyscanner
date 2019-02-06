@@ -13,6 +13,7 @@ _Nothing yet..._
 
 ### Changed
 - New `import/order` rule (see [#21](https://github.com/Skyscanner/eslint-config-skyscanner/pull/21)).
+  - **Note:** This can introduce visual bugs where CSS rule order is influenced by the order in which stylesheets are imported (either directly `import 'my-style.scss';` or indirectly via a component `import MyComponent from './MyComponent'`). An [example](https://github.com/Skyscanner/backpack/pull/1322) exists in the Backpack documentation website homepage.
 
 ## 4.0.0
 
