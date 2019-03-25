@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
-_Nothing yet..._
+### Changed
+- Integrate eslint-plugin-skyscanner-dates:
+  - eslint-plugin-skyscanner-dates: `^1.0.9`
 
 ## 5.0.0-beta.1 - Add import/order rule
 
