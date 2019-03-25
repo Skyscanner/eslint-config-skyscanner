@@ -28,7 +28,8 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.12.3",
-    "eslint-plugin-backpack": "^0.2.2"
+    "eslint-plugin-backpack": "^0.2.2",
+    "eslint-plugin-skyscanner-dates": "^1.0.9"
   },
   "scripts": {
     "pretest": "npx ensure-node-env",
