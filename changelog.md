@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+
+## UNRELEASED
+
+### Changed
+- Integrate `eslint-plugin-skyscanner-dates`, see [readme](https://github.com/Skyscanner/eslint-plugin-skyscanner-dates) for more info.
+
 ## 3.0.0 - Upgraded `esling-config-airbnb peer dependencies`
 
 ### Changed
