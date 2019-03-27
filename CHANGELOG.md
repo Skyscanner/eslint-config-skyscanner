@@ -13,13 +13,17 @@ _Nothing yet..._
 
 ### Changed
 - Integrate `eslint-plugin-skyscanner-dates`, see [readme](https://github.com/Skyscanner/eslint-plugin-skyscanner-dates) for more info.
-- **NOTE:** This change was also applied in `4.1.0` too.
 
 ## 5.0.0-beta.1 - Add import/order rule
 
 ### Changed
 - New `import/order` rule (see [#21](https://github.com/Skyscanner/eslint-config-skyscanner/pull/21)).
   - **Note:** This can introduce visual bugs where CSS rule order is influenced by the order in which stylesheets are imported (either directly `import 'my-style.scss';` or indirectly via a component `import MyComponent from './MyComponent'`). An [example](https://github.com/Skyscanner/backpack/pull/1322) exists in the Backpack documentation website homepage.
+
+## 4.1.0 - Add skyscanner dates plugin
+
+### Changed
+- Integrate `eslint-plugin-skyscanner-dates`, see [readme](https://github.com/Skyscanner/eslint-plugin-skyscanner-dates) for more info.
 
 ## 4.0.0
 
