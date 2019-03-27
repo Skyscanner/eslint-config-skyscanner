@@ -93,6 +93,11 @@ Includes all changes published in the previous betas.
 ### Changed
  - Added support for [backpack plugin](https://github.com/Skyscanner/eslint-plugin-backpack)
 
+## 3.1.0 - Add skyscanner dates plugin
+
+### Changed
+- Integrate `eslint-plugin-skyscanner-dates`, see [readme](https://github.com/Skyscanner/eslint-plugin-skyscanner-dates) for more info.
+
 ## 3.0.0 - Upgraded `esling-config-airbnb` peer dependencies
 
 ### Changed
