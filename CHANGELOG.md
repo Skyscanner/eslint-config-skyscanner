@@ -13,6 +13,7 @@ _Nothing yet..._
 
 ### Changed
 - Integrate `eslint-plugin-skyscanner-dates`, see [readme](https://github.com/Skyscanner/eslint-plugin-skyscanner-dates) for more info.
+- **NOTE:** This change was also applied in `4.1.0` too.
 
 ## 5.0.0-beta.1 - Add import/order rule
 
