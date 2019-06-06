@@ -13,7 +13,7 @@
 
 module.exports = {
   parser: 'babel-eslint',
-  extends: ['airbnb', 'plugin:skyscanner-dates/warn'],
+  extends: ['airbnb', 'plugin:skyscanner-dates/warn', 'plugin:eslint-comments/recommended'],
   plugins: ['backpack', 'skyscanner-dates'],
   rules: {
     'valid-jsdoc': ['error'],
@@ -69,5 +69,14 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
+
+    // Additional ESLint rules for directive comments of ESLint
+    // See: https://github.com/mysticatea/eslint-plugin-eslint-comments
+    'eslint-comments/disable-enable-pair': ['warn', {allowWholeFile: true}],
+    'eslint-comments/no-aggregating-enable': 'warn',
+    'eslint-comments/no-duplicate-disable': 'warn',
+    'eslint-comments/no-unlimited-disable': 'warn',
+    'eslint-comments/no-unused-disable': 'warn',
+    'eslint-comments/no-unused-enable': 'warn',
   },
 };
