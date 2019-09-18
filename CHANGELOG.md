@@ -7,7 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
-_Nothing yet..._
+### Changed
+- Integrate `eslint-plugin-eslint-comments`, see [documentation](https://mysticatea.github.io/eslint-plugin-eslint-comments/) for more info.
 
 ## 5.0.0-beta.2 - Add skyscanner dates plugin
 
