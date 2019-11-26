@@ -16,3 +16,10 @@ const DestructuringComponent = props => (
 DestructuringComponent.propTypes = {
   message: PropTypes.string.isRequired,
 };
+
+// react/jsx-props-no-spreading
+const SpreadProps = (props) => (
+  <div role="banner" {...props} />
+);
+
+export { SpreadProps };
