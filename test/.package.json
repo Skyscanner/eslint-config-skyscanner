@@ -7,16 +7,14 @@
     "type": "git",
     "url": "https://github.com/Skyscanner/eslint-config-skyscanner"
   },
-  "author": "Tim von Oldenburg <tim.vonoldenburg@skyscanner.net>",
+  "author": "Backpack Design System <backpack@skyscanner.net>",
   "license": "Apache-2.0",
-  "devDependencies": {
-    "eslint-config-skyscanner": "file:../"
-  },
   "scripts": {
     "test:pass": "echo 'Expecting pass' && eslint pass.jsx",
     "test:fail-jsdoc": "echo 'Expecting failure' && eslint jsdoc-fail.js; if [ $? -eq 1 ]; then exit 0; fi",
     "test:fail-bpk": "echo 'Expecting failure' && eslint bpk-token-fail.jsx; if [ $? -eq 1 ]; then exit 0; fi",
-    "test": "npm run test:pass && npm run test:fail-jsdoc && npm run test:fail-bpk"
+    "test:fail-prettier": "echo 'Expecting failure' && eslint prettier-fail.jsx; if [ $? -eq 1 ]; then exit 0; fi",
+    "test": "npm run test:pass && npm run test:fail-jsdoc && npm run test:fail-bpk && npm run test:fail-prettier"
   },
   "dependencies": {
     "prop-types": "^15.5.10",

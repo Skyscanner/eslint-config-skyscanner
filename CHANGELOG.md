@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+### Added
+- Integrated [Prettier](https://prettier.io/).
+
 ### Removed
 - Remove `eslint-plugin-skyscanner-dates`.
 
