@@ -15,4 +15,5 @@ npm install --save-dev eslint-config-skyscanner
 Add `"extends": "skyscanner"` to your `.eslintrc`.
 
 ## Changelog
+
 [View our up-to-date changelog](./CHANGELOG.md).
