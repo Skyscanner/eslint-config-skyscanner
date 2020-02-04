@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+### Removed
+- Remove `eslint-plugin-skyscanner-dates`.
+
 ### Changed
 - Integrate `eslint-plugin-jest`, see [documentation](https://github.com/jest-community/eslint-plugin-jest) for more into.
 - Integrate `eslint-plugin-eslint-comments`, see [documentation](https://mysticatea.github.io/eslint-plugin-eslint-comments/) for more info.

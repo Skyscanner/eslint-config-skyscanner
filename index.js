@@ -13,8 +13,8 @@
 
 module.exports = {
   parser: 'babel-eslint',
-  extends: ['airbnb', 'plugin:skyscanner-dates/warn', 'plugin:eslint-comments/recommended', "plugin:jest/recommended" ],
-  plugins: ['backpack', 'skyscanner-dates'],
+  extends: ['airbnb', 'plugin:eslint-comments/recommended', "plugin:jest/recommended" ],
+  plugins: ['backpack'],
   rules: {
     'valid-jsdoc': ['error'],
     'backpack/use-tokens': 'error',
