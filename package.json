@@ -4,8 +4,8 @@
   "description": "Skyscanner's ESLint config.",
   "license": "Apache-2.0",
   "engines": {
-    "node": "^8.9.0",
-    "npm": "^6.4.1"
+    "node": "^12.13.0",
+    "npm": "^6.12.0"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,8 @@
   "bin": "main.js",
   "main": "index.js",
   "scripts": {
-    "format:packagejson": "format-package -w",
     "format:md": "prettier --write **/*.md",
+    "format:packagejson": "format-package -w",
     "lint": "npm run lint:js",
     "lint:js": "eslint . --ext js",
     "lint:js:fix": "eslint . --ext js --fix",
