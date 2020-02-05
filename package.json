@@ -48,7 +48,7 @@
     "colors": "^1.4.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-prettier": "^3.6.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-backpack": "^0.2.3",
     "eslint-plugin-eslint-comments": "^3.1.2",
     "eslint-plugin-import": "^2.20.1",
