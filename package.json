@@ -39,8 +39,9 @@
   },
   "lint-staged": {
     "**/!(package|package-lock).json": "prettier --write",
-    "*.js": "npm run lint:js:fix",
-    "*.md": "prettier --write",
+    "**/*.js": "npm run lint:js:fix",
+    "**/*.md": "prettier --write",
+    "**/*.yml": "prettier --write",
     "package.json": "npm run format:packagejson"
   },
   "dependencies": {
