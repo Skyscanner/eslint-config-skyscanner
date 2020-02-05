@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-- Integrated [Prettier](https://prettier.io/).
+- Integrated [Prettier](https://prettier.io/). See the [migration guide from v4 to v5](docs/migration-from-4-to-5.md).
+- Integrate `eslint-plugin-jest`, see [documentation](https://github.com/jest-community/eslint-plugin-jest) for more into.
+- Integrate `eslint-plugin-eslint-comments`, see [documentation](https://mysticatea.github.io/eslint-plugin-eslint-comments/) for more info.
 
 ### Removed
 
@@ -17,8 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- Integrate `eslint-plugin-jest`, see [documentation](https://github.com/jest-community/eslint-plugin-jest) for more into.
-- Integrate `eslint-plugin-eslint-comments`, see [documentation](https://mysticatea.github.io/eslint-plugin-eslint-comments/) for more info.
+- Upgraded Node 8 (lts/carbon) to Node 12 (lts/erbium).
+- Moved `peerDependencies` into `dependencies`.
 
 ## 5.0.0-beta.2 - Add skyscanner dates plugin
 
