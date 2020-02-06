@@ -26,7 +26,7 @@ When upgrading to v5, all these dependencies can be removed from the project (un
 Prettier is an opinionated code formatter, with few configuration options.
 When installing `eslint-config-skyscanner`, the file `.prettierrc` is automatically generated with the default configuration.
 
-Prettier is able to fix many of the issues that reports, so after installing v5, eslint must be excuted with the `--fix` flag to format the code acording to the new rules.
+Prettier is able to fix many of the issues that reports, so after installing v5, eslint must be executed with the `--fix` flag to format the code according to the new rules.
 
 ### Pre-commit hook integration
 
@@ -35,4 +35,4 @@ The source code of this repo can be used as a reference for this configuration.
 
 ### Editor integration
 
-Many editors allow runnin eslint fix on save.
+Many editors allow running eslint fix on save.

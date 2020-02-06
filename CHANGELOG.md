@@ -81,7 +81,7 @@ Includes all changes published in the previous betas.
 
 ### Changed
 
-- Disabled `react/jsx-one-expression-per-line`, temporarilly - https://github.com/airbnb/javascript/commit/b6a268f780177e03b573a4f0df95ecc0d2e8783e#diff-c0191b2bdd5bfebebb8cec31d0f3993c
+- Disabled `react/jsx-one-expression-per-line`, temporarily - https://github.com/airbnb/javascript/commit/b6a268f780177e03b573a4f0df95ecc0d2e8783e#diff-c0191b2bdd5bfebebb8cec31d0f3993c
 
 ## 4.0.0-beta.6 - New `backpack/use-components` rule added
 
@@ -162,7 +162,7 @@ Includes all changes published in the previous betas.
 
 ### Fixed
 
-- Mirroring eslint-config-airbnb’s peerDependencies so that install works
+- Mirroring eslint-config-airbnb's peerDependencies so that install works
 
 ## 0.0.1 - Initial config
 

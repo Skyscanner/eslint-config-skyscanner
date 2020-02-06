@@ -23,12 +23,13 @@
   "bin": "main.js",
   "main": "index.js",
   "scripts": {
-    "format:md": "prettier --write **/*.md",
     "format:packagejson": "format-package -w",
     "lint": "npm run lint:js",
     "lint:js": "eslint . --ext js",
     "lint:js:fix": "eslint . --ext js --fix",
     "postinstall": "node ./main.js",
+    "spellcheck": "mdspell --report --en-gb --ignore-numbers --ignore-acronyms --no-suggestions",
+    "spellcheck:ci": "npm run spellcheck -- '**/*.md' '!LICENSE.md' '!**/node_modules/**/*.md'",
     "pretest": "npx ensure-node-env",
     "test": "(cd test && ./e2e-test.sh)"
   },
@@ -38,9 +39,12 @@
     }
   },
   "lint-staged": {
+    "!(LICENSE)*.md": [
+      "npm run spellcheck",
+      "prettier --write"
+    ],
     "**/!(package|package-lock).json": "prettier --write",
     "**/*.js": "npm run lint:js:fix",
-    "**/*.md": "prettier --write",
     "**/*.yml": "prettier --write",
     "package.json": "npm run format:packagejson"
   },
@@ -62,6 +66,7 @@
   "devDependencies": {
     "format-package": "^5.2.0",
     "husky": "^4.2.1",
-    "lint-staged": "^10.0.7"
+    "lint-staged": "^10.0.7",
+    "markdown-spellcheck": "^1.3.1"
   }
 }
