@@ -36,3 +36,28 @@ The source code of this repo can be used as a reference for this configuration.
 ### Editor integration
 
 Many editors allow running eslint fix on save.
+
+## Testing framework
+
+[Jest](https://jestjs.io/) is the standard testing framework defined by `eslint-config-skyscanner`, and it includes [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest), a plugin that enforces good testing practices with Jest.
+
+In case of using a different testing framework, the rules defined in [`eslint-plugin-jest/recommended`](https://github.com/jest-community/eslint-plugin-jest#recommended) can be disabled to prevent false errors being reported.
+
+Edit `.eslintrc` file to disable (globally) the needed rules, e.g.:
+
+```json
+"rules": {
+  "jest/valid-expect": "off"
+}
+```
+
+The rules can also be disabled per file/folder:
+
+```json
+"overrides": [{
+  "files": ["test/**/*.test.js"],
+  "rules": {
+    "jest/valid-expect": "off"
+  }
+}]
+```
