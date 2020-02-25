@@ -2,11 +2,7 @@
 
 cp .package.json package.json
 
-PEER_DEPENDENCIES=$(node script.js)
-
-npm install --save-dev $PEER_DEPENDENCIES
-
-npm install --no-shrinkwrap
+npm install --no-shrinkwrap --no-package-lock
 
 npm test
 

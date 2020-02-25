@@ -13,9 +13,16 @@
 
 module.exports = {
   parser: 'babel-eslint',
-  extends: ['airbnb', 'plugin:skyscanner-dates/warn', 'plugin:eslint-comments/recommended', "plugin:jest/recommended" ],
-  plugins: ['backpack', 'skyscanner-dates'],
+  extends: [
+    'airbnb',
+    'prettier',
+    'prettier/react',
+    'plugin:eslint-comments/recommended',
+    'plugin:jest/recommended',
+  ],
+  plugins: ['backpack', 'prettier'],
   rules: {
+    'prettier/prettier': 'error',
     'valid-jsdoc': ['error'],
     'backpack/use-tokens': 'error',
     'backpack/use-components': 'error',
@@ -52,13 +59,16 @@ module.exports = {
 
     // Modified from upstream eslint configuration to assert 'either' as opposed to 'both'.
     // See https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react-a11y.js#L61.
-    'jsx-a11y/label-has-associated-control': ['error', {
-      labelComponents: [],
-      labelAttributes: [],
-      controlComponents: [],
-      assert: 'either',
-      depth: 25
-    }],
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        labelComponents: [],
+        labelAttributes: [],
+        controlComponents: [],
+        assert: 'either',
+        depth: 25,
+      },
+    ],
 
     // Enforce a convention in the order of require/import statements
     // See https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
@@ -72,7 +82,7 @@ module.exports = {
 
     // Additional ESLint rules for directive comments of ESLint
     // See: https://github.com/mysticatea/eslint-plugin-eslint-comments
-    'eslint-comments/disable-enable-pair': ['warn', {allowWholeFile: true}],
+    'eslint-comments/disable-enable-pair': ['warn', { allowWholeFile: true }],
     'eslint-comments/no-aggregating-enable': 'warn',
     'eslint-comments/no-duplicate-disable': 'warn',
     'eslint-comments/no-unlimited-disable': 'warn',

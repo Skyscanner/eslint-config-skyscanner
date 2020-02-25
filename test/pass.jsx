@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Banner = ({ children }) => (
-  <div role="banner">
-    {children}
-  </div>
-);
+const Banner = ({ children }) => <div role="banner">{children}</div>;
 
 Banner.propTypes = {
   children: PropTypes.node.isRequired,
@@ -14,9 +10,7 @@ Banner.propTypes = {
 export default Banner;
 
 const DestructuringComponent = props => (
-  <div role="banner">
-    {props.message}
-  </div>
+  <div role="banner">{props.message}</div>
 );
 
 DestructuringComponent.propTypes = {

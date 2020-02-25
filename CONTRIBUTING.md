@@ -6,6 +6,14 @@ Fork this repository and send in a pull request when you're finished with your c
 
 Take note of the build status of your pull request, only builds that pass will be accepted. Please also keep to our conventions and style so we can keep this repository as clean as possible.
 
+## Pre-commit hooks
+
+This project contains some pre-commit hooks that will format automatically some files based on our guidelines.
+
+When performing a commit, the modified files will be formatted and added to the commit. In case of not been able to fix any of the issues, the commit will be aborted the list of errors will be displayed in the console.
+
+One of the steps is running a spellchecker for the markdown files. In case of some word requiring an exception, add it to [.spelling](.spelling) file.
+
 ## License
 
 By contributing your code, you agree to license your contribution under the terms of the APLv2: [LICENSE](LICENSE.md)
