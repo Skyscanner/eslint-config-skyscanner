@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+## 5.0.0 - Added Prettier, new linting libraries and clean-up.
+
 ### Added
 
 - Integrated [Prettier](https://prettier.io/). See the [migration guide from v4 to v5](docs/migration-from-4-to-5.md).
