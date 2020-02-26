@@ -21,6 +21,8 @@ When upgrading to v5, all these dependencies can be removed from the project (un
 - `eslint-plugin-backpack`
 - `eslint-plugin-skyscanner-dates`
 
+Once the dependencies have been removed and `eslint-config-skyscanner` updated, it's recommended to run `npm dedupe` and `npm prune` to clean up `package-lock.json`.
+
 ## Using Prettier
 
 Prettier is an opinionated code formatter, with few configuration options.
