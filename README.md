@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Skyscanner/eslint-config-skyscanner.svg?branch=master)](https://travis-ci.org/Skyscanner/eslint-config-skyscanner)
 [![npm version](https://img.shields.io/npm/v/eslint-config-skyscanner.svg)](https://www.npmjs.com/package/eslint-config-skyscanner)
-[![Greenkeeper badge](https://badges.greenkeeper.io/Skyscanner/eslint-config-skyscanner.svg)](https://greenkeeper.io/)
+
 
 This package includes the shareable ESLint configuration used by Skyscanner.
 
