@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
-## 5.1.0 - Added `eslint-plugin-jest-formatting` and dependency updates
+## 5.2.0 - Added `eslint-plugin-jest-formatting` and dependency updates
 
 ### Added
 
@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Updated `babel-eslint` to `10.1.0`
 - Updated `eslint-plugin-react` to `7.19.0`
+
+## 5.1.0 - This has been deprecated due to a publishing issue
 
 ## 5.0.0 - Added Prettier, new linting libraries and clean-up.
 
