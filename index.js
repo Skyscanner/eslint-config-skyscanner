@@ -19,8 +19,9 @@ module.exports = {
     'prettier/react',
     'plugin:eslint-comments/recommended',
     'plugin:jest/recommended',
+    'plugin:jest-formatting/strict',
   ],
-  plugins: ['backpack', 'prettier'],
+  plugins: ['backpack', 'prettier', 'jest-formatting'],
   rules: {
     'prettier/prettier': 'error',
     'valid-jsdoc': ['error'],
