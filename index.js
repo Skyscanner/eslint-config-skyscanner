@@ -89,5 +89,16 @@ module.exports = {
     'eslint-comments/no-unlimited-disable': 'warn',
     'eslint-comments/no-unused-disable': 'warn',
     'eslint-comments/no-unused-enable': 'warn',
+
+    // Allow alias for deprecated React component lifecycle methods
+    // https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html
+    camelcase: [
+      'error',
+      {
+        properties: 'never',
+        ignoreDestructuring: false,
+        allow: ['^UNSAFE_'],
+      },
+    ],
   },
 };

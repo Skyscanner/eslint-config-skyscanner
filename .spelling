@@ -19,6 +19,7 @@ eslint-config-airbnb
 eslint-config-skyscanner
 eslint-plugin-jsx-a11y
 jsdoc
+lifecycle
 lts
 peerdependencies
 plugin

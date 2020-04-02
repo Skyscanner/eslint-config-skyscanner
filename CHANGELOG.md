@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+### Added
+
+- Allow alias for deprecated React component lifecycle methods (like `UNSAFE_componentWillReceiveProps`). See https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html
+
 ## 5.2.0 - Added `eslint-plugin-jest-formatting` and dependency updates
 
 ### Added
