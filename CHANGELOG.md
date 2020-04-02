@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+## 5.3.0 - Allow alias for deprecated React methods
+
 ### Added
 
 - Allow alias for deprecated React component lifecycle methods (like `UNSAFE_componentWillReceiveProps`). See https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html
