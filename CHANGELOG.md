@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+### Added
+
+- Integrate `eslint-plugin-jest-dom`, see [documentation](https://github.com/testing-library/eslint-plugin-jest-dom) for more into.
+
 ## 5.3.0 - Allow alias for deprecated React methods
 
 ### Added

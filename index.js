@@ -20,6 +20,7 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:jest/recommended',
     'plugin:jest-formatting/strict',
+    'plugin:jest-dom/recommended',
   ],
   plugins: ['backpack', 'prettier', 'jest-formatting'],
   rules: {
