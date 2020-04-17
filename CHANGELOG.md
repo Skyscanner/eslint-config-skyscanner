@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+## 5.4.0 - Added `eslint-plugin-jest-dom`
+
 ### Added
 
 - Integrate `eslint-plugin-jest-dom`, see [documentation](https://github.com/testing-library/eslint-plugin-jest-dom) for more into.
