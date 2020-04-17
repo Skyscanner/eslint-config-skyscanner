@@ -48,11 +48,11 @@ module.exports = {
 
     // This is widely used in Backpack and internally and the inpact turning this on outweighs our perceived benefit of enforcing it
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
-    "react/jsx-props-no-spreading": 'off',
+    'react/jsx-props-no-spreading': 'off',
 
     // This rule is pure about code style and the inpact turning this on outweighs our perceived benefit of enforcing it
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
-    "react/static-property-placement": 'off',
+    'react/static-property-placement': 'off',
 
     // Added 'to' as a specialLink property, which prevents react-router's
     // 'Link' component from triggering this rule.

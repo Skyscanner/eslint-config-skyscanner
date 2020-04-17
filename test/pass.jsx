@@ -18,8 +18,6 @@ DestructuringComponent.propTypes = {
 };
 
 // react/jsx-props-no-spreading
-const SpreadProps = (props) => (
-  <div role="banner" {...props} />
-);
+const SpreadProps = props => <div role="banner" {...props} />;
 
 export { SpreadProps };
