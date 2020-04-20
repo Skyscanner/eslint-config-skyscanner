@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+### Removed
+
+- Remove `eslint-plugin-jest-dom`, as it can create issues if `@testing-library/jest-dom` is not used.
+
 ## 5.4.0 - Added `eslint-plugin-jest-dom`
 
 ### Added
