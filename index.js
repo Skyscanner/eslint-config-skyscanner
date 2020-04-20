@@ -40,6 +40,11 @@ module.exports = {
     // See https://github.com/yannickcr/eslint-plugin-react/issues/1389
     'react/no-typos': 'off',
 
+    // Disabled as the rule enforces using the shorthand syntax which is optional in React
+    // https://github.com/yannickcr/eslint-plugin-react/blob/bc976b837abeab1dffd90ac6168b746a83fc83cc/docs/rules/jsx-fragments.md
+    // https://github.com/airbnb/javascript/commit/a23f93eb001ec398ff42f37945b01db2787f6c93
+    'react/jsx-fragments': 'off',
+
     // One JSX Element Per Line
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-one-expression-per-line.md
     // https://github.com/airbnb/javascript/commit/b6a268f780177e03b573a4f0df95ecc0d2e8783e#diff-c0191b2bdd5bfebebb8cec31d0f3993c
