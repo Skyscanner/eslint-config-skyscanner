@@ -28,6 +28,10 @@ module.exports = {
     'backpack/use-tokens': 'error',
     'backpack/use-components': 'error',
 
+    // This rule is prettry restrictive and we feel this decision should be left to developers to decide on a case by case basis.
+    // A file can contain more than one class and still have a single responsibility
+    'max-classes-per-file': ['error', 3],
+
     // This rule is purely subjective and for consistency sake.
     // The impact of turning this on outweighs our perceived benefit of enforcing it
     'react/destructuring-assignment': 'off',
