@@ -55,7 +55,7 @@ module.exports = {
     // TODO: re-enable when an option for text children is available
     'react/jsx-one-expression-per-line': 'off',
 
-    // This is widely used in Backpack and internally and the inpact turning this on outweighs our perceived benefit of enforcing it
+    // This is widely used in Backpack and internally and the impact turning this on outweighs our perceived benefit of enforcing it
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
     'react/jsx-props-no-spreading': 'off',
 
@@ -63,7 +63,7 @@ module.exports = {
     // See https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react.js#L484
     'react/state-in-constructor': 'off',
 
-    // This rule is pure about code style and the inpact turning this on outweighs our perceived benefit of enforcing it
+    // This rule is purely about code style and the impact turning this on outweighs our perceived benefit of enforcing it
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
     'react/static-property-placement': 'off',
 

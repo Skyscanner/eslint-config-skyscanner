@@ -2,11 +2,6 @@
 
 The main motivation for this is adding rule-of-hooks for react. (https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
-The change from v5 to v6 includes two main items:
-
-- Upgraded `eslint-config-airbnb` to `v18` which comes with major breaking rule changes.
-- Dropped eslint v4 support
-
 # Breaking rules that have been disabled
 
 - `react/jsx-props-no-spreading` https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
@@ -80,3 +75,8 @@ The change from v5 to v6 includes two main items:
 
 - `max-classes-per-file` https://eslint.org/docs/rules/max-classes-per-file.
   - Changed from 1 to 3 as it seems too restrictive and it should be defined by each use case. A file can contain more than one class and still have a `single responsibility`
+
+# The change from v5 to v6 includes two main items:
+
+- Upgraded `eslint-config-airbnb` to `v18` which comes with major breaking rule changes.
+- Dropped eslint v4 support
