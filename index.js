@@ -28,6 +28,10 @@ module.exports = {
     'backpack/use-tokens': 'error',
     'backpack/use-components': 'error',
 
+    // This rule is prettry restrictive and we feel this decision should be left to developers to decide on a case by case basis.
+    // A file can contain more than one class and still have a single responsibility
+    'max-classes-per-file': ['error', 3],
+
     // This rule is purely subjective and for consistency sake.
     // The impact of turning this on outweighs our perceived benefit of enforcing it
     'react/destructuring-assignment': 'off',
@@ -40,11 +44,28 @@ module.exports = {
     // See https://github.com/yannickcr/eslint-plugin-react/issues/1389
     'react/no-typos': 'off',
 
+    // Disabled as the rule enforces using the shorthand syntax which is optional in React
+    // https://github.com/yannickcr/eslint-plugin-react/blob/bc976b837abeab1dffd90ac6168b746a83fc83cc/docs/rules/jsx-fragments.md
+    // https://github.com/airbnb/javascript/commit/a23f93eb001ec398ff42f37945b01db2787f6c93
+    'react/jsx-fragments': 'off',
+
     // One JSX Element Per Line
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-one-expression-per-line.md
     // https://github.com/airbnb/javascript/commit/b6a268f780177e03b573a4f0df95ecc0d2e8783e#diff-c0191b2bdd5bfebebb8cec31d0f3993c
     // TODO: re-enable when an option for text children is available
     'react/jsx-one-expression-per-line': 'off',
+
+    // This is widely used in Backpack and internally and the impact turning this on outweighs our perceived benefit of enforcing it
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
+    'react/jsx-props-no-spreading': 'off',
+
+    // Disabled as it conflicts with flow annotations and there is a TODO for them to fix this once an upstream dependency has support
+    // See https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react.js#L484
+    'react/state-in-constructor': 'off',
+
+    // This rule is purely about code style and the impact turning this on outweighs our perceived benefit of enforcing it
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
+    'react/static-property-placement': 'off',
 
     // Added 'to' as a specialLink property, which prevents react-router's
     // 'Link' component from triggering this rule.
