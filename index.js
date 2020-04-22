@@ -59,6 +59,10 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
     'react/jsx-props-no-spreading': 'off',
 
+    // Disabled as it conflicts with flow annotations and there is a TODO for them to fix this once an upstream dependency has support
+    // See https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react.js#L484
+    'react/state-in-constructor': 'off',
+
     // This rule is pure about code style and the inpact turning this on outweighs our perceived benefit of enforcing it
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
     'react/static-property-placement': 'off',

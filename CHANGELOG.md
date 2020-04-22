@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - Update eslint-config-airbnb to 18.0.1
+  - Migration guide here [v5 to v6](./docs/migration-from-5-to-6.md)
 - Integrate `eslint-plugin-react-hooks`.
 
 ### Removed
