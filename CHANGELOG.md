@@ -13,8 +13,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Update eslint-config-airbnb to 18.1.0
   - Migration guide here [v5 to v6](./docs/migration-from-5-to-6.md)
-- Integrate `eslint-plugin-react-hooks`.
 - Remove `eslint-plugin-jest-dom`, as it can create issues if `@testing-library/jest-dom` is not used.
+
+### Added
+
+- Integrate `eslint-plugin-react-hooks`.
 
 ## 5.4.0 - Added `eslint-plugin-jest-dom`
 
