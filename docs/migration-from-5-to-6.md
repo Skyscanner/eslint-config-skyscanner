@@ -2,6 +2,20 @@
 
 The main motivation for this is adding rule-of-hooks for react. (https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
+# React
+
+`eslint-config-skyscanner` will try to detect automatically the version of React installed.
+
+If your project doesn't use it or it is not installed in the same `package.json` as `eslint-config-skyscanner`, it must be manually set in `.eslintrc`:
+
+```
+"settings": {
+  "react": {
+    "version": "16.4"
+  }
+}
+```
+
 # Breaking rules that have been disabled
 
 - `react/jsx-props-no-spreading` https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
