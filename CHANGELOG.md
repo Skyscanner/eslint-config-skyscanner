@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+## 6.0.1 - Upgraded `eslint-plugin-backpack`
+
+- Upgrade `eslint-config-backpack` to the latest version.
+
+## RELEASED
+
 ## 6.0.0 - Upgraded `eslint-config-airbnb` to latest major version
 
 ### Breaking
