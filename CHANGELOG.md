@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 6.0.1 - Upgraded `eslint-plugin-backpack`
 
-- Upgrade `eslint-config-backpack` to the latest version.
+- Upgrade `eslint-plugin-backpack` to the latest version.
 
 ## RELEASED
 
