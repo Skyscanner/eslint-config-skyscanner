@@ -60,24 +60,26 @@ if (!cwd) {
   process.exit(1);
 }
 
-const readPackageJSON = fullPath => {
+const readPackageJSON = (fullPath) => {
   const file = fs.readFileSync(fullPath, { encoding: 'utf8' });
 
   return JSON.parse(file);
 };
 
-const fileExsists = filePath => fs.existsSync(filePath);
+const fileExsists = (filePath) => fs.existsSync(filePath);
 
-const hasEslintRcFile = workingDictionary =>
-  ESLINTRC_FILES.some(file => fileExsists(path.join(workingDictionary, file)));
-const hasEslintPackageConfig = packageJSON =>
-  Object.prototype.hasOwnProperty.call(packageJSON, 'eslintConfig');
-
-const hasPrettierRcFile = workingDictionary =>
-  PRETTIERRC_FILES.some(file =>
+const hasEslintRcFile = (workingDictionary) =>
+  ESLINTRC_FILES.some((file) =>
     fileExsists(path.join(workingDictionary, file)),
   );
-const hasPrettierPackageConfig = packageJSON =>
+const hasEslintPackageConfig = (packageJSON) =>
+  Object.prototype.hasOwnProperty.call(packageJSON, 'eslintConfig');
+
+const hasPrettierRcFile = (workingDictionary) =>
+  PRETTIERRC_FILES.some((file) =>
+    fileExsists(path.join(workingDictionary, file)),
+  );
+const hasPrettierPackageConfig = (packageJSON) =>
   Object.prototype.hasOwnProperty.call(packageJSON, 'prettier');
 
 try {

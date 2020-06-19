@@ -9,7 +9,7 @@ Banner.propTypes = {
 
 export default Banner;
 
-const DestructuringComponent = props => (
+const DestructuringComponent = (props) => (
   <div role="banner">{props.message}</div>
 );
 
@@ -18,7 +18,7 @@ DestructuringComponent.propTypes = {
 };
 
 // react/jsx-props-no-spreading
-const SpreadProps = props => <div role="banner" {...props} />;
+const SpreadProps = (props) => <div role="banner" {...props} />;
 
 // react/static-property-placement
 class MyComponent extends React.Component {
@@ -42,7 +42,7 @@ class MyComponent extends React.Component {
 }
 
 // react/jsx-fragments
-const Fragments = props => (
+const Fragments = (props) => (
   <React.Fragment>
     <Banner>{props.message}</Banner>
   </React.Fragment>
