@@ -7,11 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
-## 6.0.1 - Upgraded `eslint-plugin-backpack`
+- Upgrade `eslint-plugin-backpack` to `2.0.0`. This version brings [support for enforcing component usage in web projects](https://github.com/Skyscanner/eslint-plugin-backpack/blob/master/CHANGELOG.md#200---support-for-web-components).
 
-- Upgrade `eslint-plugin-backpack` to the latest version.
+## 7.0.0 - Upgraded `eslint-plugin-backpack`
 
-## RELEASED
+- Upgraded `eslint-plugin-backpack` to the latest version. This introduces web support for the `backpack/use-components` rule. It accepts a `platform` option that can be set to `web` (default) or `native`. See the [eslint-plugin-backpack docs](https://github.com/Skyscanner/eslint-plugin-backpack/blob/master/README.md#use-components) for more information.
+- **This is only a breaking change for React Native users**, because the rule now defaults to web components.
 
 ## 6.0.0 - Upgraded `eslint-config-airbnb` to latest major version
 
