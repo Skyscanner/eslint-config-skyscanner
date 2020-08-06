@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
-- Upgrade `eslint-plugin-backpack` to `2.0.0`. This version brings [support for enforcing component usage in web projects](https://github.com/Skyscanner/eslint-plugin-backpack/blob/master/CHANGELOG.md#200---support-for-web-components).
+_Nothing yet.._
 
 ## 7.0.0 - Upgraded `eslint-plugin-backpack`
 
