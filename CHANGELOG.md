@@ -9,16 +9,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Breaking
 
-- Updated `eslint` to `7.9.0`
-- Updated `eslint-plugin-jest` to `24.0.2`
-- Updated `eslint-plugin-react-hooks` to `4.1.2`
-- Updated `prettier` to `2.1.2`
+- Updated [`eslint`]() to `7.9.0`
+- Updated [`eslint-plugin-jest`](https://github.com/jest-community/eslint-plugin-jest/releases) to `24.0.2`
+- Updated [`eslint-plugin-react-hooks`](https://github.com/facebook/react/blob/master/packages/eslint-plugin-react-hooks/CHANGELOG.md) to `4.1.2`
+- Updated [`prettier`](https://github.com/prettier/prettier/releases) to `2.1.2`
 
 ### Changed
 
-- Updated `eslint-config-airbnb` to `18.2.0`
-- Updated `eslint-plugin-jsx-a11y` to `6.3.1`
-- Updated `eslint-plugin-react` to `7.20.6`
+- Updated [`eslint-config-airbnb`](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/CHANGELOG.md) to `18.2.0`
+- Updated [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/CHANGELOG.md) to `6.3.1`
 
 ## 7.0.0 - Upgraded `eslint-plugin-backpack`
 

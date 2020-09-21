@@ -20,6 +20,7 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:jest/recommended',
     'plugin:jest-formatting/strict',
+    'plugin:react-hooks/recommended',
   ],
   plugins: ['backpack', 'prettier', 'jest-formatting'],
   rules: {
@@ -121,5 +122,7 @@ module.exports = {
         allow: ['^UNSAFE_'],
       },
     ],
+
+    'jest/no-large-snapshots': 'off',
   },
 };
