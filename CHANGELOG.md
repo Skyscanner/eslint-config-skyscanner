@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+- Turned off `backpack/use-components` due to a bug with `autoImport` not correctly turning off when configured.
+
 - Updated [`eslint-config-airbnb`](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/CHANGELOG.md) to `18.2.0`
 - Updated [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/CHANGELOG.md) to `6.3.1`
 - Updated [`eslint-plugin-react`]() to `7.21.4`
