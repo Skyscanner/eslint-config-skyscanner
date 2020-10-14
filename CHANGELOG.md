@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+## 8.0.0 - Upgraded `eslint` and other major changes
+
+Migration guide here [v7 to v8](./docs/migration-from-7-to-8.md)
+
 ### Breaking
 
 - Updated [`eslint`]() to `7.11.0`
