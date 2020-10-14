@@ -20,13 +20,14 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:jest/recommended',
     'plugin:jest-formatting/strict',
+    'plugin:react-hooks/recommended',
   ],
   plugins: ['backpack', 'prettier', 'jest-formatting'],
   rules: {
     'prettier/prettier': 'error',
     'valid-jsdoc': ['error'],
     'backpack/use-tokens': 'error',
-    'backpack/use-components': 'error',
+    'backpack/use-components': 'off',
 
     // This rule is prettry restrictive and we feel this decision should be left to developers to decide on a case by case basis.
     // A file can contain more than one class and still have a single responsibility
@@ -121,5 +122,7 @@ module.exports = {
         allow: ['^UNSAFE_'],
       },
     ],
+
+    'jest/no-large-snapshots': 'off',
   },
 };

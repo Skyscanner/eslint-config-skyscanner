@@ -20,6 +20,8 @@ eslint-config-skyscanner
 eslint-plugin-jsx-a11y
 jsdoc
 lifecycle
+linter
+linters
 lts
 peerdependencies
 plugin
@@ -32,4 +34,8 @@ v5
 v5.x
 v6
 v6.x
+v7
+v7.x
+v8
+v8.x
 webpack
