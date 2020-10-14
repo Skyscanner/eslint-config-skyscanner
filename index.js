@@ -26,8 +26,8 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'valid-jsdoc': ['error'],
-    'backpack/use-tokens': 'off',
-    'backpack/use-components': 'error',
+    'backpack/use-tokens': 'error',
+    'backpack/use-components': 'off',
 
     // This rule is prettry restrictive and we feel this decision should be left to developers to decide on a case by case basis.
     // A file can contain more than one class and still have a single responsibility
