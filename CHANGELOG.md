@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+## 8.0.1 - Upgrading `backpack` dependency
+
+- Upgrading `eslint-plugin-backpack` to `2.0.2`
+
 ## 8.0.0 - Upgraded `eslint` and other major changes
 
 Migration guide here [v7 to v8](./docs/migration-from-7-to-8.md)
