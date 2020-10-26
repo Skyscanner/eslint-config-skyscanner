@@ -51,7 +51,7 @@
   "dependencies": {
     "babel-eslint": "^10.1.0",
     "colors": "^1.4.0",
-    "eslint": "^7.11.0",
+    "eslint": "^7.12.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.13.0",
     "eslint-plugin-backpack": "^2.0.2",
