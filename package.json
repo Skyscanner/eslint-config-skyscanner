@@ -54,7 +54,7 @@
     "eslint": "^7.12.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-backpack": "^2.0.3",
+    "eslint-plugin-backpack": "^3.0.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
