@@ -7,9 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
-## 8.0.3 - Upgrading dependencies
+## 8.1.0 - Upgrading dependencies
 
+- Upgrading `prettier` to `2.2.0` (https://prettier.io/blog/2020/11/20/2.2.0.html)
+
+- Upgrading `eslint` to 7.14.0
 - Upgrading `eslint-plugin-backpack` to `3.0.1`
+- Upgrading `eslint-config-airbnb` to `18.2.1`
+- Upgrading `jest` to `26.6.3`
+- Upgrading `eslint-plugin-jest` to 24.1.3
 
 ## 8.0.2 - Upgrading `backpack` dependency
 
