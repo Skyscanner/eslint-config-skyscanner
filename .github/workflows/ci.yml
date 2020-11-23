@@ -19,7 +19,9 @@ jobs:
         run: npm run lint
 
       - name: Test
-        run: npm test
+        run: |
+          nvm use
+          npm test
 
       - name: Spellcheck
         run: npm run spellcheck:ci
