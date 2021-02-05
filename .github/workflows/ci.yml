@@ -1,4 +1,4 @@
-name: ESLint Plugin Backpack CI
+name: ESLint Config Skyscanner CI
 
 on:
   push:
