@@ -2,7 +2,15 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 8.2.0 - Updating dependencies
+## 9.0.0 - Updating dependencies
+
+### Breaking
+
+- Upgrading `eslint-config-prettier` from `6.15.0` to `8.1.0`
+  - Major updates here: [changelog](https://github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md#version-810-2021-02-24)
+    - `arrow-body-style` and `prefer-arrow-callback` are now no longer turned off by default, bringing cleaner code changes with enabling these. All reported issues should be fixable using `--fix` option.
+
+## Patched
 
 - Upgrading `eslint` from `7.14.0` to `7.22.0`
 - Upgrading `eslint-plugin-jest` from `24.1.3` to `24.3.2`
