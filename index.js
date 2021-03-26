@@ -16,7 +16,6 @@ module.exports = {
   extends: [
     'airbnb',
     'prettier',
-    'prettier/react',
     'plugin:eslint-comments/recommended',
     'plugin:jest/recommended',
     'plugin:jest-formatting/strict',
