@@ -1,0 +1,35 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "10:00"
+  open-pull-requests-limit: 10
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: husky
+    versions:
+    - ">= 5.a, < 6"
+  - dependency-name: eslint-plugin-jest
+    versions:
+    - 24.1.5
+    - 24.1.9
+    - 24.3.1
+    - 24.3.4
+  - dependency-name: eslint
+    versions:
+    - 7.18.0
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 7.2.0
+    - 8.0.0
+  - dependency-name: husky
+    versions:
+    - 4.3.8
+  - dependency-name: eslint-plugin-react
+    versions:
+    - 7.22.0
