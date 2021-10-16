@@ -49,6 +49,8 @@
     "package.json": "npm run format:packagejson"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "babel-eslint": "^10.1.0",
     "colors": "^1.4.0",
     "eslint": "^7.25.0",
@@ -56,13 +58,14 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-backpack": "^3.0.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-jest-formatting": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-typescript-enum": "^2.0.11",
     "prettier": "^2.3.0"
   },
   "devDependencies": {
