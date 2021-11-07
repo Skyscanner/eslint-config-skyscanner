@@ -202,6 +202,9 @@ module.exports = {
         ],
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'warn',
+
+        // Linting configuration below this line is NOT taken from react-scripts
+        '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
       },
     },
   ],
