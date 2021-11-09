@@ -142,7 +142,6 @@ module.exports = {
     'jest/no-large-snapshots': 'off',
   },
   overrides: [
-    // TS linting configuration is taken directly from react-scripts: https://github.com/facebook/create-react-app/blob/9d0369b1fe3260e620b08effcf85f1edefc5d1ea/packages/eslint-config-react-app/index.js#L31
     {
       files: ['**/*.ts?(x)'],
       parser: '@typescript-eslint/parser',
@@ -202,6 +201,7 @@ module.exports = {
         ],
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'warn',
+        '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
       },
     },
   ],
