@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 10.1.0
+
+## Added
+
+- Add `@typescript-eslint/array-type` rule and specify `array-simple` for TypeScript files.
+
 # 10.0.0
 
 ## Added/Breaking
