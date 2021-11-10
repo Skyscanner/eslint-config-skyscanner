@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 10.1.0
+
+## Added
+
+- Add `@typescript-eslint/array-type` rule and specify `array-simple` for TypeScript files.
+
+# 10.0.0
+
+## Added/Breaking
+
+- Support TypeScript. These changes are only breaking if you were already using TypeScript in your project.
+  - Adds overrides for `.ts?(x)` files taken from react-scripts, adds `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser`.
+  - Adds config for `.ts?(x)` extensions under `import/extensions`
+  - Adds `eslint-plugin-typescript-enum` to disallow TypeScript language expression feature `enum`
+-  Bump `prettier` from `2.2.1` to `2.3.0`
+-  Bump eslint-plugin-react from 7.23.2 to 7.24.0 
+
 # 9.0.1 - Updating dependencies
 
 ## Patched

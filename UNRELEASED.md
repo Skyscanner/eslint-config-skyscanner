@@ -2,7 +2,9 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-**Breaking/Added:**
--  Bump `prettier` from `2.2.1` to `2.3.2`
--  Bump eslint-plugin-react from 7.23.2 to 7.24.0 
+## Patched
 
+- Upgrading `eslint-plugin-typescript-enum` from `2.0.11` to `2.1.0`
+- Upgrading `eslint-plugin-prettier` from `3.4.0` to `3.4.1`
+- Upgrading `eslint-plugin-react-hooks` from `4.2.0` to `4.3.0`
+- Upgrading `prettier` from `2.3.0` to `2.3.2`
