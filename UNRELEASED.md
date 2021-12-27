@@ -9,3 +9,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 -  Bump eslint-plugin-react from 7.24.0 to 7.28.0
 -  Bump lint-staged from 12.0.2 to 12.1.4
 -  Bump jest from 26.6.3 to 27.4.5
+-  Bump eslint-plugin-jsx-a11y from 6.4.1 to 6.5.1
