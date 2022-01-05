@@ -25,18 +25,15 @@
   "scripts": {
     "format:packagejson": "format-package -w",
     "lint": "npm run lint:js",
+    "lint-staged": "lint-staged",
     "lint:js": "eslint . --ext js",
     "lint:js:fix": "eslint . --ext js --fix",
     "postinstall": "node ./main.js",
+    "prepare": "husky install",
     "spellcheck": "mdspell --report --en-gb --ignore-numbers --ignore-acronyms --no-suggestions",
     "spellcheck:ci": "npm run spellcheck -- '**/*.md' '!LICENSE.md' '!**/node_modules/**/*.md'",
     "pretest": "npx ensure-node-env",
     "test": "(cd test && ./e2e-test.sh)"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "!(LICENSE)*.md": [
