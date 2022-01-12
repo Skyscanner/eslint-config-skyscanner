@@ -63,7 +63,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-typescript-enum": "^2.1.0",
-    "prettier": "^2.3.2"
+    "prettier": "^2.5.1"
   },
   "devDependencies": {
     "format-package": "^6.1.0",
