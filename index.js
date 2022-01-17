@@ -202,6 +202,12 @@ module.exports = {
         'no-useless-constructor': 'off',
         '@typescript-eslint/no-useless-constructor': 'warn',
         '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+        '@typescript-eslint/consistent-type-imports': [
+          'error',
+          {
+            prefer: 'type-imports',
+          },
+        ],
       },
     },
   ],
