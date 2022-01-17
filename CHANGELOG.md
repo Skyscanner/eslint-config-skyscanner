@@ -9,14 +9,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 # 10.3.0
 
+## Added
+
+- `consistent-type-imports` to prefer `type-imports`
+
 ## Updated
 
--  Bump @typescript-eslint/eslint-plugin from 5.3.0 to 5.8.0
--  Bump @typescript-eslint/parser from 5.1.0 to 5.8.0
--  Bump eslint-plugin-react from 7.24.0 to 7.28.0
--  Bump lint-staged from 12.0.2 to 12.1.4
--  Bump jest from 26.6.3 to 27.4.5
--  Bump eslint-plugin-jsx-a11y from 6.4.1 to 6.5.1
+- Bump @typescript-eslint/eslint-plugin from 5.8.0 to 5.9.0
+- Bump @typescript-eslint/parser from 5.8.0 to 5.9.1
+- Bump prettier from 2.3.2 to 2.5.1
+
+# 10.3.0
+
+## Updated
+
+- Bump @typescript-eslint/eslint-plugin from 5.3.0 to 5.8.0
+- Bump @typescript-eslint/parser from 5.1.0 to 5.8.0
+- Bump eslint-plugin-react from 7.24.0 to 7.28.0
+- Bump lint-staged from 12.0.2 to 12.1.4
+- Bump jest from 26.6.3 to 27.4.5
+- Bump eslint-plugin-jsx-a11y from 6.4.1 to 6.5.1
 
 # 10.2.0
 
@@ -41,8 +53,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - Adds overrides for `.ts?(x)` files taken from react-scripts, adds `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser`.
   - Adds config for `.ts?(x)` extensions under `import/extensions`
   - Adds `eslint-plugin-typescript-enum` to disallow TypeScript language expression feature `enum`
--  Bump `prettier` from `2.2.1` to `2.3.0`
--  Bump eslint-plugin-react from 7.23.2 to 7.24.0 
+- Bump `prettier` from `2.2.1` to `2.3.0`
+- Bump eslint-plugin-react from 7.23.2 to 7.24.0
 
 # 9.0.1 - Updating dependencies
 
