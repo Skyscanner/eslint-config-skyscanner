@@ -1,5 +1,28 @@
-import React from 'react';
+/* eslint-disable no-unused-vars,import/no-unresolved,import/extensions */
+// import/order
+import fs from 'fs';
+
 import PropTypes from 'prop-types';
+import React from 'react';
+import ReactDom from 'react-dom';
+
+import ExternalLibrary from 'external-library';
+
+import { fontSizeSm } from '@skyscanner/bpk-foundations-web/tokens/base.es6';
+import BpkButton from 'bpk-component-button';
+import ArrowUpIcon from 'bpk-component-icon/sm/long-arrow-up';
+
+import SomeCommonFunctionality from 'common/some-functionality';
+
+import Component2 from '../../Component2';
+import Component1 from '../Component1';
+import SubComponent from '../Component1/SubComponent';
+import OtherComponent from '../OtherComponent';
+
+import SiblingComponent from './SiblingComponent';
+
+import STYLES from './styles.scss';
+/* eslint-enable no-unused-vars,import/no-unresolved,import/extensions */
 
 const Banner = ({ children }) => <div role="banner">{children}</div>;
 

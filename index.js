@@ -96,11 +96,50 @@ module.exports = {
 
     // Enforce a convention in the order of require/import statements
     // See https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
+    // Order:
+    //   1. builtin (node native)
+    //   2. react, react-dom, prop-types
+    //   3. external (other external libraries)
+    //   4. Backpack components
+    //   5. common package (shared functionailities between client and server)
+    //   6. parent (parent folders)
+    //   7. sibling (sibling folders)
+    //   8. index (same folder)
+    //   9. scss files
     'import/order': [
       'error',
       {
         groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
         'newlines-between': 'always',
+        pathGroups: [
+          {
+            pattern: '{react,react-dom,prop-types}',
+            group: 'external',
+            position: 'before',
+          },
+          {
+            pattern:
+              '{bpk-*,bpk-**,bpk-*/**,bpk-*/**/**,@skyscanner/bpk-*/**/**}',
+            group: 'external',
+            position: 'after',
+          },
+          {
+            pattern: 'common/**',
+            group: 'external',
+            position: 'after',
+          },
+          {
+            pattern: '*.scss',
+            group: 'sibling',
+            patternOptions: { matchBase: true },
+            position: 'after',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['react', 'react-dom', 'prop-types'],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
       },
     ],
 
