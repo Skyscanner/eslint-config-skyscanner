@@ -84,4 +84,17 @@ class Foo extends React.Component {
   }
 }
 
-export { SpreadProps, MyComponent, Fragments, Foo };
+// sort-destructure-keys
+const SortDestructureKeys = ({ anotherProp, oneProp }) => (
+  <React.Fragment>
+    <div>{oneProp}</div>
+    <div>{anotherProp}</div>
+  </React.Fragment>
+);
+
+SortDestructureKeys.propTypes = {
+  oneProp: PropTypes.string.isRequired,
+  anotherProp: PropTypes.string.isRequired,
+};
+
+export { SpreadProps, MyComponent, Fragments, Foo, SortDestructureKeys };

@@ -23,7 +23,13 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:typescript-enum/recommended',
   ],
-  plugins: ['backpack', 'prettier', 'jest-formatting', 'typescript-enum'],
+  plugins: [
+    'backpack',
+    'prettier',
+    'jest-formatting',
+    'sort-destructure-keys',
+    'typescript-enum',
+  ],
   rules: {
     'prettier/prettier': 'error',
     'valid-jsdoc': ['error'],
@@ -142,6 +148,10 @@ module.exports = {
         },
       },
     ],
+
+    // Require object destructure key to be sorted
+    // https://github.com/mthadley/eslint-plugin-sort-destructure-keys
+    'sort-destructure-keys/sort-destructure-keys': 'error',
 
     // Ensure consistent use of file extension within the import path
     // The airbnb config we extend does not support TypeScript so we override it here
