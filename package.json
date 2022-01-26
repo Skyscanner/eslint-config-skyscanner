@@ -45,6 +45,7 @@
     "**/*.yml": "prettier --write",
     "package.json": "npm run format:packagejson"
   },
+  "access": "public",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
