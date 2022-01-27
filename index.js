@@ -111,11 +111,12 @@ module.exports = {
     //   6. parent (parent folders)
     //   7. sibling (sibling folders)
     //   8. index (same folder)
-    //   9. scss files
+    //   9. Types
+    //  10. scss files
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
+        groups: ['builtin', 'external', 'parent', 'sibling', 'index', 'type'],
         'newlines-between': 'always',
         pathGroups: [
           {
@@ -136,7 +137,7 @@ module.exports = {
           },
           {
             pattern: '*.scss',
-            group: 'sibling',
+            group: 'type',
             patternOptions: { matchBase: true },
             position: 'after',
           },
