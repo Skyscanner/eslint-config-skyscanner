@@ -1,7 +1,7 @@
 # eslint-config-skyscanner
 
 [![Build Status](https://github.com/Skyscanner/eslint-config-skyscanner/workflows/ESLint%20Config%20Skyscanner%20CI/badge.svg)](https://github.com/Skyscanner/eslint-config-skyscanner/actions)
-[![npm version](https://img.shields.io/npm/v/eslint-config-skyscanner.svg)](https://www.npmjs.com/package/eslint-config-skyscanner)
+[![npm version](https://img.shields.io/npm/v/@skyscanner/eslint-config-skyscanner.svg)](https://www.npmjs.com/package/@skyscanner/eslint-config-skyscanner)
 
 This package includes the shareable ESLint configuration used by Skyscanner.
 
