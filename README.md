@@ -8,16 +8,16 @@ This package includes the shareable ESLint configuration used by Skyscanner.
 ## Installation
 
 ```bash
-npm install --save-dev eslint-config-skyscanner
+npm install --save-dev @skyscanner/eslint-config-skyscanner
 ```
 
 Add `"extends": "skyscanner"` to your `.eslintrc`.
 
 ## React
 
-`eslint-config-skyscanner` will try to detect automatically the version of React installed.
+`@skyscanner/eslint-config-skyscanner` will try to detect automatically the version of React installed.
 
-If your project doesn't use it or it is not installed in the same `package.json` as `eslint-config-skyscanner`, it must be manually set in `.eslintrc`:
+If your project doesn't use it or it is not installed in the same `package.json` as `@skyscanner/eslint-config-skyscanner`, it must be manually set in `.eslintrc`:
 
 ```
 "settings": {
