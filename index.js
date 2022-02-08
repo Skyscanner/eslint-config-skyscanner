@@ -120,7 +120,7 @@ module.exports = {
         'newlines-between': 'always',
         pathGroups: [
           {
-            pattern: '{react,react-dom,prop-types}',
+            pattern: '{react,react-dom,react-dom/server,prop-types}',
             group: 'external',
             position: 'before',
           },
