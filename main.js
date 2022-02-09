@@ -89,7 +89,9 @@ try {
     hasEslintRcFile(cwd) || hasEslintPackageConfig(projectPackageJSON);
 
   if (hasExistingEslintConfig) {
-    console.log('Please add "extends": [\'skyscanner\'] to your eslint config');
+    console.log(
+      'Please add "extends": [\'@skyscanner/skyscanner\'] to your eslint config',
+    );
   } else {
     fs.copyFileSync(
       path.join(__dirname, 'eslintrc.template'),
