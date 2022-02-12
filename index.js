@@ -112,7 +112,7 @@ module.exports = {
     //   7. sibling (sibling folders)
     //   8. index (same folder)
     //   9. Types
-    //  10. scss files
+    //  10. Style files (scss, css)
     'import/order': [
       'error',
       {
@@ -136,7 +136,7 @@ module.exports = {
             position: 'after',
           },
           {
-            pattern: '*.scss',
+            pattern: '{*.scss,*.css}',
             group: 'type',
             patternOptions: { matchBase: true },
             position: 'after',
