@@ -21,6 +21,7 @@ import OtherComponent from '../OtherComponent';
 
 import SiblingComponent from './SiblingComponent';
 
+import STYLES2 from './styles.css';
 import STYLES from './styles.scss';
 /* eslint-enable no-unused-vars,import/no-unresolved,import/extensions */
 
