@@ -2,3 +2,4 @@
 .npmignore
 .travis.yml
 test/package.json
+.github
