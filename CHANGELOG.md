@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 12.0.0
+
+## Breaking
+
+- Drops support for Node versions < 16. No new functionality is introduced, but from this point forwards it should not be assumed Node 12 will work.
+- Bump `eslint-plugin-backpack` to latest.
+
 # 11.1.0
 
 ## Updated
