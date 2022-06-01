@@ -11,6 +11,7 @@ import ExternalLibrary from 'external-library';
 import { fontSizeSm } from '@skyscanner/bpk-foundations-web/tokens/base.es6';
 import BpkButton from 'bpk-component-button';
 import ArrowUpIcon from 'bpk-component-icon/sm/long-arrow-up';
+import BpkButtonLink from '@skyscanner/backpack-web/bpk-component-link';
 
 import SomeCommonFunctionality from 'common/some-functionality';
 
