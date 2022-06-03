@@ -85,6 +85,15 @@ class Foo extends React.Component {
   }
 }
 
+// react/require-default-props
+const FunctionalComponentWithOptionalProps = ({ count = 1 }) => (
+  <div>{count}</div>
+);
+
+FunctionalComponentWithOptionalProps.propTypes = {
+  count: PropTypes.number,
+};
+
 // sort-destructure-keys
 const SortDestructureKeys = ({ anotherProp, oneProp }) => (
   <React.Fragment>
