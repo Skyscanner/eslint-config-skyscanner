@@ -126,7 +126,7 @@ module.exports = {
           },
           {
             pattern:
-              '{bpk-*,bpk-**,bpk-*/**,bpk-*/**/**,@skyscanner/bpk-*/**/**}',
+              '{bpk-*,bpk-**,bpk-*/**,bpk-*/**/**,@skyscanner/bpk-*/**/**,@skyscanner/backpack-web/**/**}',
             group: 'external',
             position: 'after',
           },
