@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 12.1.1
+
+## Updated
+
+- Take into account the new Backpack single package in import groups.
+
 # 12.1.0
 
 - Bump eslint-plugin-react from 7.28.0 to 7.30.0
