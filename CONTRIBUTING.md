@@ -2,6 +2,12 @@
 
 We're glad you want to make a contribution!
 
+_For Skyscanner employees_
+
+If you are a Skyscanner employee, please follow the "Engineering Contribution" guide in the Backpack space in Confluence to get push rights to this repository.
+
+_For non employees_
+
 Fork this repository and send in a pull request when you're finished with your changes. Link any relevant issues in too.
 
 Take note of the build status of your pull request, only builds that pass will be accepted. Please also keep to our conventions and style so we can keep this repository as clean as possible.
