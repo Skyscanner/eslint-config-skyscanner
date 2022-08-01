@@ -90,7 +90,7 @@ try {
 
   if (hasExistingEslintConfig) {
     console.log(
-      'Please add "extends": [\'@skyscanner/skyscanner\'] to your eslint config',
+      'Please add "extends": [\'@skyscanner/eslint-config-skyscanner\'] to your eslint config',
     );
   } else {
     fs.copyFileSync(
