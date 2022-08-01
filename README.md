@@ -11,7 +11,7 @@ This package includes the shareable ESLint configuration used by Skyscanner.
 npm install --save-dev @skyscanner/eslint-config-skyscanner
 ```
 
-Add `"extends": "@skyscanner/skyscanner"` to your `.eslintrc`.
+Add `"extends": "@skyscanner/eslint-config-skyscanner"` to your `.eslintrc`.
 
 ## React
 

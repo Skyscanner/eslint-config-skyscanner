@@ -2,7 +2,6 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-# 12.2.0
+# 12.2.1
 
-- Prefer default arguments to default props in functional components
-- Take into account the new Backpack single package in import groups.
+- Update guides about how to extend config to consistently say 'add @skyscanner/eslint-config-skyscanner'
