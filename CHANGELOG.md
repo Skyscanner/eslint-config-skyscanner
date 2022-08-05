@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 12.2.0
+
+- Prefer default arguments to default props in functional components
+
 # 12.1.1
 
 ## Updated
