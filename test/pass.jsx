@@ -11,6 +11,7 @@ import ExternalLibrary from 'external-library';
 import { fontSizeSm } from '@skyscanner/bpk-foundations-web/tokens/base.es6';
 import BpkButton from 'bpk-component-button';
 import ArrowUpIcon from 'bpk-component-icon/sm/long-arrow-up';
+import BpkButtonLink from '@skyscanner/backpack-web/bpk-component-link';
 
 import SomeCommonFunctionality from 'common/some-functionality';
 
@@ -84,6 +85,15 @@ class Foo extends React.Component {
     return <div>Foo {this.state.bar}</div>;
   }
 }
+
+// react/require-default-props
+const FunctionalComponentWithOptionalProps = ({ count = 1 }) => (
+  <div>{count}</div>
+);
+
+FunctionalComponentWithOptionalProps.propTypes = {
+  count: PropTypes.number,
+};
 
 // sort-destructure-keys
 const SortDestructureKeys = ({ anotherProp, oneProp }) => (

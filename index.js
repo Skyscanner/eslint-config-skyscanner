@@ -40,6 +40,17 @@ module.exports = {
     // A file can contain more than one class and still have a single responsibility
     'max-classes-per-file': ['error', 3],
 
+    // defaultProps on function components is getting deprecated by React
+    // and recommends to use defaultArguments instead
+    // See https://github.com/reactjs/rfcs/blob/createlement-rfc/text/0000-create-element-changes.md#deprecate-defaultprops-on-function-components
+    'react/require-default-props': [
+      2,
+      {
+        forbidDefaultForRequired: true,
+        functions: 'defaultArguments',
+      },
+    ],
+
     // This rule is purely subjective and for consistency sake.
     // The impact of turning this on outweighs our perceived benefit of enforcing it
     'react/destructuring-assignment': 'off',
@@ -126,7 +137,7 @@ module.exports = {
           },
           {
             pattern:
-              '{bpk-*,bpk-**,bpk-*/**,bpk-*/**/**,@skyscanner/bpk-*/**/**}',
+              '{bpk-*,bpk-**,bpk-*/**,bpk-*/**/**,@skyscanner/bpk-*/**/**,@skyscanner/backpack-web/**/**}',
             group: 'external',
             position: 'after',
           },

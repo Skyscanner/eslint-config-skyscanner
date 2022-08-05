@@ -1,6 +1,6 @@
 {
   "name": "@skyscanner/eslint-config-skyscanner",
-  "version": "12.0.0",
+  "version": "12.2.0",
   "description": "Skyscanner's ESLint config.",
   "license": "Apache-2.0",
   "engines": {
@@ -23,7 +23,6 @@
   "bin": "main.js",
   "main": "index.js",
   "scripts": {
-    "format:packagejson": "format-package -w",
     "lint": "npm run lint:js",
     "lint-staged": "lint-staged",
     "lint:js": "eslint . --ext js",
@@ -42,12 +41,11 @@
     ],
     "**/!(package|package-lock).json": "prettier --write",
     "**/*.js": "npm run lint:js:fix",
-    "**/*.yml": "prettier --write",
-    "package.json": "npm run format:packagejson"
+    "**/*.yml": "prettier --write"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.31.0",
     "babel-eslint": "^10.1.0",
     "colors": "^1.4.0",
     "eslint": "^7.32.0",
@@ -67,10 +65,9 @@
     "prettier": "^2.5.1"
   },
   "devDependencies": {
-    "format-package": "^6.1.0",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
-    "lint-staged": "^12.3.5",
+    "lint-staged": "^13.0.3",
     "markdown-spellcheck": "^1.3.1"
   }
 }
