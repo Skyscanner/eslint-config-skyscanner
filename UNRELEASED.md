@@ -2,6 +2,7 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-# 12.2.1
+# 12.3.0
 
 - Update guides about how to extend config to consistently say 'add @skyscanner/eslint-config-skyscanner'
+- Bump @typescript-eslint/parser from 5.12.0 to 5.31.0
