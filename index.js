@@ -197,6 +197,29 @@ module.exports = {
     ],
 
     'jest/no-large-snapshots': 'off',
+
+    // disallow certain syntax forms
+    // https://eslint.org/docs/rules/no-restricted-syntax
+    // should be similar to https://github.com/airbnb/javascript/blob/37d48dbf6082bd8958fdc5db5df207bb1166d653/packages/eslint-config-airbnb-base/rules/style.js#L337-L357
+    // however, missing the ForOfStatement rule as we don't support IE11 (so we don't need the polyfill) and aren't currently opinionated about loops
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: 'ForInStatement',
+        message:
+          'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
+      },
+      {
+        selector: 'LabeledStatement',
+        message:
+          'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+      },
+      {
+        selector: 'WithStatement',
+        message:
+          '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+      },
+    ],
   },
   overrides: [
     {
