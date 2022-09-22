@@ -289,6 +289,20 @@ module.exports = {
           },
         ],
       },
+      overrides: [
+        {
+          files: ["*.d.ts"],
+          rules: {
+            '@typescript-eslint/consistent-type-imports': [
+              'error',
+              {
+                disallowTypeAnnotations: false,
+                prefer: 'type-imports',
+              },
+            ],
+          },
+        },
+      ],
     },
   ],
 };
