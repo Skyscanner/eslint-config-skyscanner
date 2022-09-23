@@ -1,6 +1,6 @@
 {
   "name": "@skyscanner/eslint-config-skyscanner",
-  "version": "12.4.0",
+  "version": "12.5.0",
   "description": "Skyscanner's ESLint config.",
   "license": "Apache-2.0",
   "engines": {
@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.33.1",
-    "@typescript-eslint/parser": "^5.33.1",
+    "@typescript-eslint/parser": "^5.38.0",
     "babel-eslint": "^10.1.0",
     "colors": "^1.4.0",
     "eslint": "^7.32.0",
