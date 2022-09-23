@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 12.5.0
+
+**Added:**
+
+- Allow `import()` syntax in `.d.ts` files.
+
 # 12.4.0
 
 - Override the no-restricted-syntax syntax rule to allow `for...of` loops. ([#398](https://github.com/Skyscanner/eslint-config-skyscanner/pull/398))
