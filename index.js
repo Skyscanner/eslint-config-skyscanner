@@ -291,7 +291,7 @@ module.exports = {
       },
     },
     {
-      files: ["*.d.ts"],
+      files: ['*.d.ts'],
       rules: {
         '@typescript-eslint/consistent-type-imports': [
           'error',
