@@ -7,9 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 12.6.0
+
+## Updated
+
+- Update from Node `^16.13.0` to `>=16.13.0` to allow versions higher than 16
+- Bump @typescript-eslint/eslint-plugin from 5.33.1 to 5.40.1
+- Bump @typescript-eslint/parser from 5.33.1 to 5.40.1
+- Bump ansi-regex from 5.0.0 to 5.0.1
+
 # 12.5.0
 
-**Added:**
+## Added
 
 - Allow `import()` syntax in `.d.ts` files.
 
