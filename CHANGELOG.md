@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 12.6.1
+
+- Bump `eslint-plugin-backpack` to latest.
+
 # 12.6.0
 
 ## Updated
