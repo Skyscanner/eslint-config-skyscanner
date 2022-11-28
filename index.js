@@ -22,6 +22,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:import/typescript',
     'plugin:typescript-enum/recommended',
+    'plugin:react/jsx-runtime',
   ],
   plugins: [
     'backpack',
