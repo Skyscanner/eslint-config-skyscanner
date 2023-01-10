@@ -12,9 +12,11 @@ beta.8
 beta.9
 beta.10
 beta.11
+codemod
 config
 css
 destructure
+destructured
 destructuring
 devdependencies
 eslint
@@ -30,6 +32,7 @@ peerdependencies
 plugin
 skyscanner
 stylesheets
+useState
 v14
 v4
 v4.x

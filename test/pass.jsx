@@ -3,7 +3,7 @@
 import fs from 'fs';
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import { Component, Fragment } from 'react';
 import ReactDom from 'react-dom';
 
 import ExternalLibrary from 'external-library';
@@ -46,7 +46,7 @@ DestructuringComponent.propTypes = {
 const SpreadProps = (props) => <div role="banner" {...props} />;
 
 // react/static-property-placement
-class MyComponent extends React.Component {
+class MyComponent extends Component {
   static propTypes = { message: PropTypes.string.isRequired };
 
   constructor(props: PropTypes) {
@@ -68,9 +68,9 @@ class MyComponent extends React.Component {
 
 // react/jsx-fragments
 const Fragments = (props) => (
-  <React.Fragment>
+  <Fragment>
     <Banner>{props.message}</Banner>
-  </React.Fragment>
+  </Fragment>
 );
 
 Fragments.propTypes = {
@@ -78,7 +78,7 @@ Fragments.propTypes = {
 };
 
 // react/state-in-constructor
-class Foo extends React.Component {
+class Foo extends Component {
   state = { bar: 'Bar' };
 
   render() {
@@ -97,10 +97,10 @@ FunctionalComponentWithOptionalProps.propTypes = {
 
 // sort-destructure-keys
 const SortDestructureKeys = ({ anotherProp, oneProp }) => (
-  <React.Fragment>
+  <Fragment>
     <div>{oneProp}</div>
     <div>{anotherProp}</div>
-  </React.Fragment>
+  </Fragment>
 );
 
 SortDestructureKeys.propTypes = {
