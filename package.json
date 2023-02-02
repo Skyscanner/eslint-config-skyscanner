@@ -1,6 +1,6 @@
 {
   "name": "@skyscanner/eslint-config-skyscanner",
-  "version": "13.0.0",
+  "version": "13.1.0",
   "description": "Skyscanner's ESLint config.",
   "license": "Apache-2.0",
   "engines": {
