@@ -31,7 +31,7 @@
     "prepare": "husky install",
     "spellcheck": "mdspell --report --en-gb --ignore-numbers --ignore-acronyms --no-suggestions",
     "spellcheck:ci": "npm run spellcheck -- '**/*.md' '!LICENSE.md' '!**/node_modules/**/*.md'",
-    "pretest": "npx ensure-node-env",
+    "pretest": "npx ensure-node-env@2.0.0",
     "test": "(cd test && ./e2e-test.sh)"
   },
   "lint-staged": {
