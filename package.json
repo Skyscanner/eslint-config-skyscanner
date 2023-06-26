@@ -44,7 +44,7 @@
     "**/*.yml": "prettier --write"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
     "@typescript-eslint/parser": "^5.59.11",
     "babel-eslint": "^10.1.0",
     "colors": "^1.4.0",
