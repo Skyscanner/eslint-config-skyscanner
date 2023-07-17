@@ -12,7 +12,16 @@
  */
 
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
+
+  // By default do not require consumers to have a Babel config file, but allow the default behaviour where if one exists Babel will use it. Provide the correct presets for Skyscanner supported standards. Can be overridden by consumers who wish to deviate or extend.
+  // https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser#additional-parser-configuration
+  parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-react'],
+    },
+  },
   extends: [
     'airbnb',
     'prettier',
@@ -37,7 +46,7 @@ module.exports = {
     'backpack/use-tokens': 'error',
     'backpack/use-components': 'off',
 
-    // This rule is prettry restrictive and we feel this decision should be left to developers to decide on a case by case basis.
+    // This rule is pretty restrictive and we feel this decision should be left to developers to decide on a case by case basis.
     // A file can contain more than one class and still have a single responsibility
     'max-classes-per-file': ['error', 3],
 
@@ -119,7 +128,7 @@ module.exports = {
     //   2. react, react-dom, prop-types
     //   3. external (other external libraries)
     //   4. Backpack components
-    //   5. common package (shared functionailities between client and server)
+    //   5. common package (shared functionalities between client and server)
     //   6. parent (parent folders)
     //   7. sibling (sibling folders)
     //   8. index (same folder)

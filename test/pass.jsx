@@ -49,7 +49,7 @@ const SpreadProps = (props) => <div role="banner" {...props} />;
 class MyComponent extends Component {
   static propTypes = { message: PropTypes.string.isRequired };
 
-  constructor(props: PropTypes) {
+  constructor(props) {
     super(props);
 
     this.state = {
