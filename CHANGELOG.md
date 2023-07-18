@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 14.0.1
+
+- Bump lint-staged from 13.2.2 to 13.2.3
+- Bump @typescript-eslint/parser from 5.59.11 to 5.62.0
+
 # 14.0.0
 
 ## Updated
