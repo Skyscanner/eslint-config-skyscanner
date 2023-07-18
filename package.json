@@ -1,6 +1,6 @@
 {
   "name": "@skyscanner/eslint-config-skyscanner",
-  "version": "15.0.0-beta.1",
+  "version": "15.0.0-beta.2",
   "description": "Skyscanner's ESLint config.",
   "license": "Apache-2.0",
   "engines": {
@@ -64,7 +64,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sort-destructure-keys": "^1.5.0",
     "eslint-plugin-typescript-enum": "^2.1.0",
-    "prettier": "^2.8.4"
+    "prettier": "^3.0.0"
   },
   "devDependencies": {
     "husky": "^8.0.3",
