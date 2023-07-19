@@ -96,6 +96,18 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
     'react/static-property-placement': 'off',
 
+    // This rule is purely about code style and the impact turning this on outweighs our perceived benefit of enforcing it
+    // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
+    'react/function-component-definition': 'off',
+
+    // This rule is about code style, and is auto-fixable, so we keep it turned on. We extend it to 'allowExpressions' as it allows a common TypeScript pattern
+    // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md#allowexpressions
+    'react/jsx-no-useless-fragment': ['error', { allowExpressions: true }],
+
+    // Linting specific to Flow and PropTypes. We are fully committed to TypeScript, so disabled to not create toil for repos not yet migrated.
+    // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prefer-exact-props.md
+    'react/prefer-exact-props': 'off',
+
     // Added 'to' as a specialLink property, which prevents react-router's
     // 'Link' component from triggering this rule.
     // See https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/339
@@ -167,10 +179,6 @@ module.exports = {
       },
     ],
 
-    // Require object destructure key to be sorted
-    // https://github.com/mthadley/eslint-plugin-sort-destructure-keys
-    'sort-destructure-keys/sort-destructure-keys': 'error',
-
     // Ensure consistent use of file extension within the import path
     // The airbnb config we extend does not support TypeScript so we override it here
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/extensions.md
@@ -185,6 +193,10 @@ module.exports = {
         tsx: 'never',
       },
     ],
+
+    // This rule 'is useful in Yarn/Lerna workspaces'. In our monorepo setups we
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-relative-packages.md
+    'import/no-relative-packages': 'off',
 
     // Additional ESLint rules for directive comments of ESLint
     // See: https://github.com/mysticatea/eslint-plugin-eslint-comments
@@ -248,6 +260,14 @@ module.exports = {
           "Please import directly (e.g. import { useEffect } from 'react').",
       },
     ],
+
+    // Require object destructure key to be sorted
+    // https://github.com/mthadley/eslint-plugin-sort-destructure-keys
+    'sort-destructure-keys/sort-destructure-keys': 'error',
+
+    // This causes issues in Redux reducers. Disabled while this is our global state tool of choice
+    // https://eslint.org/docs/latest/rules/default-param-last
+    'default-param-last': 'off',
   },
   overrides: [
     {
