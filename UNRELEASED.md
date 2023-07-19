@@ -25,3 +25,13 @@ AirBnB Config Release notes:
 
 - https://github.com/airbnb/javascript/blob/eslint-config-airbnb-v19.0.0/packages/eslint-config-airbnb/CHANGELOG.md#1900--2021-11-10
 - https://github.com/airbnb/javascript/blob/eslint-config-airbnb-v19.0.0/packages/eslint-config-airbnb-base/CHANGELOG.md#1500--2021-11-08
+
+The following rules have been disabled or downgraded:
+
+- [react/function-component-definition](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md)
+- [react/jsx-no-useless-fragment](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md#allowexpressions)
+- [react/prefer-exact-props](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prefer-exact-props.md)
+- [import/no-relative-packages](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-relative-packages.md)
+- [default-param-last](https://eslint.org/docs/latest/rules/default-param-last)
+
+See inline comments for each as to why.
