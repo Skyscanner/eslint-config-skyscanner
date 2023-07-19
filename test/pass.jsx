@@ -70,6 +70,7 @@ class MyComponent extends Component {
 const Fragments = (props) => (
   <Fragment>
     <Banner>{props.message}</Banner>
+    <span>Some default text</span>
   </Fragment>
 );
 

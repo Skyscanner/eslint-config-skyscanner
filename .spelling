@@ -2,6 +2,8 @@ airbnb
 ansi-regex
 APLv2
 beta.1
+beta.10
+beta.11
 beta.2
 beta.3
 beta.4
@@ -10,11 +12,10 @@ beta.6
 beta.7
 beta.8
 beta.9
-beta.10
-beta.11
 codemod
 config
 css
+default-param-last
 destructure
 destructured
 destructuring
@@ -24,6 +25,7 @@ eslint-config-airbnb
 eslint-config-skyscanner
 eslint-plugin-jsx-a11y
 jsdoc
+jsx-no-useless-fragment
 lifecycle
 linter
 linters
