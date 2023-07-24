@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 15.1.0
+
+- Bump eslint-plugin-backpack from 4.0.1 to 5.0.0 to support ESLint 8
+
 # 15.0.0
 
 ## Breaking
