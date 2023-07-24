@@ -1,15 +1,9 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
+This file remains for historical references, but all new releases are now documented in the package's [Releases page](https://github.com/Skyscanner/eslint-config-skyscanner/releases).
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
-
-[Unreleased changes](./UNRELEASED.md)
-
-# 15.1.0
-
-- Bump eslint-plugin-backpack from 4.0.1 to 5.0.0 to support ESLint 8
 
 # 15.0.0
 
