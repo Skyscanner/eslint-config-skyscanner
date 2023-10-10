@@ -176,6 +176,9 @@ module.exports = {
           },
         ],
         pathGroupsExcludedImportTypes: ['react', 'react-dom', 'prop-types'],
+        alphabetize: {
+          order: 'asc',
+        },
       },
     ],
 
