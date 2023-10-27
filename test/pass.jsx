@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars,import/no-unresolved,import/extensions */
+/* eslint-disable no-unused-vars,import/no-unresolved,import/extensions,import/no-extraneous-dependencies */
 // import/order
 import fs from 'fs';
 
@@ -24,7 +24,7 @@ import SiblingComponent from './SiblingComponent';
 
 import STYLES2 from './styles.css';
 import STYLES from './styles.scss';
-/* eslint-enable no-unused-vars,import/no-unresolved,import/extensions */
+/* eslint-enable no-unused-vars,import/no-unresolved,import/extensions,import/no-extraneous-dependencies */
 
 const Banner = ({ children }) => <div role="banner">{children}</div>;
 
