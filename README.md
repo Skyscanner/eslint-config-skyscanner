@@ -27,6 +27,12 @@ If your project doesn't use it or it is not installed in the same `package.json`
 }
 ```
 
+## Rules included in this repository
+
+Custom rules are currently wrapped in a locally-installed package.
+This will no longer be needed once the eslint version used accepts objects as shown in
+[custom rules tutorial](https://eslint.org/docs/latest/extend/custom-rule-tutorial#step-8-use-the-plugin-locally).
+
 ## Changelog
 
 [View our up-to-date changelog](./CHANGELOG.md).
