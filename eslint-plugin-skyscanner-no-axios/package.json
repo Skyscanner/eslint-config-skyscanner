@@ -1,9 +1,3 @@
 {
-  "name": "eslint-plugin-skyscanner-no-axios",
-  "version": "0.0.1",
-  "description": "Eslint plugin forbidding direct use of axios",
-  "main": "src/index.js",
-  "peerDependencies": {
-    "eslint": ">=8.0.0"
-  }
+  "main": "src/index.js"
 }
