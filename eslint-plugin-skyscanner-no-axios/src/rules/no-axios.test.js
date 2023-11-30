@@ -60,7 +60,7 @@ ruleTester.run('no-axios', noAxios, {
       ],
     },
     {
-      code: 'const foo = require("axios/some/internal/thing").default;',
+      code: 'const foo = require("axios").default;',
       errors: [
         {
           message: 'Deprecated require of axios package',
