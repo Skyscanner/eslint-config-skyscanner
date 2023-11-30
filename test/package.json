@@ -16,7 +16,8 @@
     "test:fail-prettier": "echo 'Expecting failure' && eslint prettier-fail.jsx; if [ $? -eq 1 ]; then exit 0; fi",
     "test:fail-react": "echo 'Expecting failure' && eslint react-fail.tsx; if [ $? -eq 1 ]; then exit 0; fi",
     "test:fail-import-order": "echo 'Expecting failure' && eslint order-fail.jsx; if [ $? -eq 1 ]; then exit 0; fi",
-    "test": "npm run test:pass && npm run test:fail-jsdoc && npm run test:fail-bpk && npm run test:fail-prettier && npm run test:fail-react && npm run test:fail-import-order"
+    "test:skyscanner-no-axios": "cd ../eslint-plugin-skyscanner-no-axios; jest",
+    "test": "npm run test:skyscanner-no-axios && npm run test:pass && npm run test:fail-jsdoc && npm run test:fail-bpk && npm run test:fail-prettier && npm run test:fail-react && npm run test:fail-import-order"
   },
   "dependencies": {
     "prop-types": "^15.5.10",
