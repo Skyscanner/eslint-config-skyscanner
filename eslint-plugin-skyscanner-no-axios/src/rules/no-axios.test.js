@@ -9,7 +9,7 @@ const ruleTester = new RuleTester({
   },
 });
 
-ruleTester.run('no-moment', noAxios, {
+ruleTester.run('no-axios', noAxios, {
   valid: [
     {
       code: 'const test = require("foo-axios");',
