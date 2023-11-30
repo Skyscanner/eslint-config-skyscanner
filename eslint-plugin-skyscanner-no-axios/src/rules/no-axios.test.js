@@ -4,7 +4,7 @@ const noAxios = require('./no-axios');
 
 const ruleTester = new RuleTester({
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
 });
@@ -69,6 +69,24 @@ ruleTester.run('no-axios', noAxios, {
     },
     {
       code: 'import { foo } from "axios";',
+      errors: [
+        {
+          message: 'Deprecated import of axios package',
+        },
+      ],
+    },
+
+    {
+      code: 'import("axios").then(() => console.log("foo"));',
+      errors: [
+        {
+          message: 'Deprecated import of axios package',
+        },
+      ],
+    },
+
+    {
+      code: 'const axios = await import("axios");',
       errors: [
         {
           message: 'Deprecated import of axios package',

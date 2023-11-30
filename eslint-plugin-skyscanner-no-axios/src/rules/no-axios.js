@@ -19,6 +19,14 @@ module.exports = {
         context.report(node, 'Deprecated import of axios package');
       }
     },
+    ImportExpression: (node) => {
+      if (
+        node.source.value === 'axios' ||
+        node.source.value.indexOf('axios/') === 0
+      ) {
+        context.report(node, 'Deprecated import of axios package');
+      }
+    },
   }),
   meta: {
     docs: {
