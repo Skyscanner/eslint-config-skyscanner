@@ -51,5 +51,29 @@ ruleTester.run('no-axios', noAxios, {
         },
       ],
     },
+    {
+      code: 'const { foo } = require("axios");',
+      errors: [
+        {
+          message: 'Deprecated require of axios package',
+        },
+      ],
+    },
+    {
+      code: 'const foo = require("axios/some/internal/thing").default;',
+      errors: [
+        {
+          message: 'Deprecated require of axios package',
+        },
+      ],
+    },
+    {
+      code: 'import { foo } from "axios";',
+      errors: [
+        {
+          message: 'Deprecated import of axios package',
+        },
+      ],
+    },
   ],
 });
