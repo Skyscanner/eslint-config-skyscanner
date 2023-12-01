@@ -39,12 +39,14 @@ module.exports = {
     'jest-formatting',
     'sort-destructure-keys',
     'typescript-enum',
+    'skyscanner-no-axios',
   ],
   rules: {
     'prettier/prettier': 'error',
     'valid-jsdoc': ['error'],
     'backpack/use-tokens': 'error',
     'backpack/use-components': 'off',
+    'skyscanner-no-axios/no-axios': 'error',
 
     // This rule is pretty restrictive and we feel this decision should be left to developers to decide on a case by case basis.
     // A file can contain more than one class and still have a single responsibility
