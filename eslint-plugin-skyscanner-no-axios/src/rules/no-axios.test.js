@@ -17,6 +17,11 @@ ruleTester.run('no-axios', noAxios, {
     {
       code: 'import test from "foo-axios";',
     },
+    {
+      // we can only detect actual strings,
+      // not string templates and other things that evaluate to string
+      code: 'const axios = await import(`axios`);',
+    },
   ],
   invalid: [
     {
@@ -87,6 +92,15 @@ ruleTester.run('no-axios', noAxios, {
 
     {
       code: 'const axios = await import("axios");',
+      errors: [
+        {
+          message: 'Deprecated import of axios package',
+        },
+      ],
+    },
+
+    {
+      code: 'import("axios").then(() => console.log("foo"));',
       errors: [
         {
           message: 'Deprecated import of axios package',
