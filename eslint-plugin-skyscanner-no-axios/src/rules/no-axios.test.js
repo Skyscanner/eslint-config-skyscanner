@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { RuleTester } = require('eslint');
 
 const noAxios = require('./no-axios');
