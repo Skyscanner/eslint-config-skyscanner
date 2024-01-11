@@ -12,6 +12,7 @@
  */
 
 module.exports = {
+  ignorePatterns: ['test'],
   parser: '@babel/eslint-parser',
 
   // By default do not require consumers to have a Babel config file, but allow the default behaviour where if one exists Babel will use it. Provide the correct presets for Skyscanner supported standards. Can be overridden by consumers who wish to deviate or extend.
@@ -39,14 +40,12 @@ module.exports = {
     'jest-formatting',
     'sort-destructure-keys',
     'typescript-enum',
-    'skyscanner-no-axios',
   ],
   rules: {
     'prettier/prettier': 'error',
     'valid-jsdoc': ['error'],
     'backpack/use-tokens': 'error',
     'backpack/use-components': 'off',
-    'skyscanner-no-axios/no-axios': 'error',
 
     // This rule is pretty restrictive and we feel this decision should be left to developers to decide on a case by case basis.
     // A file can contain more than one class and still have a single responsibility
