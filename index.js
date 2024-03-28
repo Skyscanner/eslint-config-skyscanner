@@ -40,6 +40,7 @@ module.exports = {
     'sort-destructure-keys',
     'typescript-enum',
     '@skyscanner/rules',
+    'deprecation',
   ],
   rules: {
     'prettier/prettier': 'error',
@@ -288,10 +289,11 @@ module.exports = {
         // typescript-eslint specific options
         warnOnUnsupportedTypeScriptVersion: true,
       },
-      plugins: ['@typescript-eslint'],
+      plugins: ['@typescript-eslint', 'deprecation'],
       // If adding a typescript-eslint version of an existing ESLint rule,
       // make sure to disable the ESLint rule here.
       rules: {
+        'deprecation/deprecation': 'warn',
         // TypeScript's `noFallthroughCasesInSwitch` option is more robust (#6906)
         'default-case': 'off',
         // 'tsc' already handles this (https://github.com/typescript-eslint/typescript-eslint/issues/291)
