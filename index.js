@@ -285,7 +285,7 @@ module.exports = {
         ecmaFeatures: {
           jsx: true,
         },
-
+        project: ['./tsconfig.json'],
         // typescript-eslint specific options
         warnOnUnsupportedTypeScriptVersion: true,
       },
