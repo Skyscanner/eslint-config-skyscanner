@@ -15,6 +15,9 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "**/*.spec.ts"]
+  "include": [
+    "src/**/*",
+    "test/**/*" // Include test directory
+  ],
+  "exclude": ["node_modules", "build"]
 }

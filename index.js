@@ -10,6 +10,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+const path = require('path');
 
 module.exports = {
   parser: '@babel/eslint-parser',
@@ -285,7 +286,7 @@ module.exports = {
         ecmaFeatures: {
           jsx: true,
         },
-        project: ['./tsconfig.json'],
+        project: [path.resolve(__dirname, './tsconfig.json')],
         // typescript-eslint specific options
         warnOnUnsupportedTypeScriptVersion: true,
       },
