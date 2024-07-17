@@ -47,7 +47,7 @@
     "@babel/core": "^7.23.7",
     "@babel/eslint-parser": "^7.24.1",
     "@babel/preset-react": "^7.24.1",
-    "@skyscanner/eslint-plugin-rules": "^1.2.0",
+    "@skyscanner/eslint-plugin-rules": "^1.3.0",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
     "@typescript-eslint/parser": "^7.12.0",
     "colors": "^1.4.0",
