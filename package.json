@@ -49,7 +49,7 @@
     "@babel/preset-react": "^7.24.1",
     "@skyscanner/eslint-plugin-rules": "^1.3.0",
     "@typescript-eslint/eslint-plugin": "^8.3.0",
-    "@typescript-eslint/parser": "^8.3.0",
+    "@typescript-eslint/parser": "^8.20.0",
     "colors": "^1.4.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
