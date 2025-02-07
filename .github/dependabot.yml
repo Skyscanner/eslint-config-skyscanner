@@ -8,5 +8,9 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     ignore:
+      # LOOM-2045: Requires investigation
+      - dependency-name: '@typescript-eslint/eslint-plugin'
+      # LOOM-2045: Requires investigation
+      - dependency-name: '@typescript-eslint/parser'
       - dependency-name: '*'
         update-types: ['version-update:semver-patch']
