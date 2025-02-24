@@ -65,7 +65,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
     "eslint-plugin-typescript-enum": "^2.1.0",
-    "prettier": "^3.4.2"
+    "prettier": "^3.5.2"
   },
   "devDependencies": {
     "husky": "^9.1.4",
