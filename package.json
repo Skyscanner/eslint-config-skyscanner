@@ -28,7 +28,7 @@
   "scripts": {
     "lint": "npm run lint:js",
     "lint-staged": "lint-staged",
-    "lint:js": "eslint",
+    "lint:js": "eslint . --fix",
     "lint:js:fix": "eslint . --fix",
     "postinstall": "node ./main.js",
     "prepare": "husky install",
