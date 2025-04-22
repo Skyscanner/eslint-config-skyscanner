@@ -28,8 +28,8 @@
   "scripts": {
     "lint": "npm run lint:js",
     "lint-staged": "lint-staged",
-    "lint:js": "eslint . js",
-    "lint:js:fix": "eslint . js --fix",
+    "lint:js": "eslint .js",
+    "lint:js:fix": "eslint .js --fix",
     "postinstall": "node ./main.js",
     "prepare": "husky install",
     "spellcheck": "mdspell --report --en-gb --ignore-numbers --ignore-acronyms --no-suggestions",
