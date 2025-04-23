@@ -13,7 +13,11 @@
   },
   "author": "Backpack Design System <backpack@skyscanner.net>",
   "browserslist": [
-    "extends browserslist-config-skyscanner"
+    "Chrome >= 109",
+    "Edge >= 129",
+    "Firefox >= 131",
+    "Safari >= 15",
+    "Samsung >= 26"
   ],
   "keywords": [
     "eslint",
