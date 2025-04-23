@@ -30,5 +30,3 @@ If your project doesn't use it or it is not installed in the same `package.json`
 ## Changelog
 
 [View our up-to-date changelog](./CHANGELOG.md).
-
-placeholder text
