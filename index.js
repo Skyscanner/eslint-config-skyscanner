@@ -22,6 +22,8 @@ module.exports = {
       presets: ['@babel/preset-react'],
     },
   },
+  // Enable ESLint to resolve TypeScript and Node-style imports, including tsconfig paths and packages subpath exports
+  settings: { 'import/resolver': { typescript: true, node: true } },
   extends: [
     'airbnb',
     'prettier',
