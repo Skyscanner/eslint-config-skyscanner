@@ -10,6 +10,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
+const path = require("path")
 
 module.exports = {
   parser: '@babel/eslint-parser',
@@ -25,7 +26,13 @@ module.exports = {
   // Enable ESLint to resolve TypeScript and Node-style imports, including tsconfig paths and packages subpath exports
   settings: {
     'import/resolver': {
-      typescript: true,
+      // These resolver statements are able to support both flat and nested node_modules structures.
+      // This is required because both pnpm and npm are currently used and supported within Skyscannere ecosystem.
+      // This should identify the locally nested eeslint-import-resolver-typescript module if present, otherwise the
+      // standard module resolution will find it higher in the tree if it has been hoisted (in the pnpm case).
+      // By doing this, we avoid customers having to manually install the eslint-import-resolver-typescript package
+      // to artificially hoist it in their dependency tree.
+      [require.resolve('eslint-import-resolver-typescript', { paths: [path.resolve(__dirname, './node_modules')] })]: true,
       node: true,
     },
   },
