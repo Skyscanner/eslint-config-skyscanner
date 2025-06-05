@@ -10,7 +10,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-const path = require("path")
+const path = require('path');
 
 module.exports = {
   parser: '@babel/eslint-parser',
@@ -33,7 +33,9 @@ module.exports = {
       // By doing this, we avoid customers having to manually install the eslint-import-resolver-typescript package
       // to artificially hoist it in their dependency tree.
       // https://github.com/import-js/eslint-plugin-import/tree/main?tab=readme-ov-file#resolvers
-      [require.resolve('eslint-import-resolver-typescript', { paths: [path.resolve(__dirname, './node_modules')] })]: true,
+      [require.resolve('eslint-import-resolver-typescript', {
+        paths: [path.resolve(__dirname, './node_modules')],
+      })]: true,
       node: true,
     },
   },
