@@ -66,38 +66,45 @@ const readPackageJSON = (fullPath) => {
   return JSON.parse(file);
 };
 
-const fileExsists = (filePath) => fs.existsSync(filePath);
+const fileExists = (filePath) => fs.existsSync(filePath);
 
 const hasEslintRcFile = (workingDictionary) =>
   ESLINTRC_FILES.some((file) =>
-    fileExsists(path.join(workingDictionary, file)),
+    fileExists(path.join(workingDictionary, file)),
   );
 const hasEslintPackageConfig = (packageJSON) =>
   Object.prototype.hasOwnProperty.call(packageJSON, 'eslintConfig');
 
 const hasPrettierRcFile = (workingDictionary) =>
   PRETTIERRC_FILES.some((file) =>
-    fileExsists(path.join(workingDictionary, file)),
+    fileExists(path.join(workingDictionary, file)),
   );
 const hasPrettierPackageConfig = (packageJSON) =>
   Object.prototype.hasOwnProperty.call(packageJSON, 'prettier');
 
+const ESLINT_FLAT_CONFIG_FILE = 'eslint.config.mjs';
+const hasFlatEslintConfig = (workingDirectory) => fileExists(path.join(workingDirectory, ESLINT_FLAT_CONFIG_FILE));
+
 try {
   const projectPackageJSON = readPackageJSON(path.join(cwd, 'package.json'));
 
-  const hasExistingEslintConfig =
-    hasEslintRcFile(cwd) || hasEslintPackageConfig(projectPackageJSON);
+  const hasExistingFlatEslintConfig = hasFlatEslintConfig(cwd);
+  const hasExistingLegacyEslintConfig = hasEslintRcFile(cwd) || hasEslintPackageConfig(projectPackageJSON);
 
-  if (hasExistingEslintConfig) {
+  if (hasExistingFlatEslintConfig) {
     console.log(
-      'Please add "extends": [\'@skyscanner/eslint-config-skyscanner\'] to your eslint config',
+      'Detected `eslint.config.mjs` (ESLint flat config). If you want to use @skyscanner/eslint-config-skyscanner, import and spread it in your exported config array. See https://eslint.org/docs/latest/use/configure/migration-guide',
+    );
+  } else if (hasExistingLegacyEslintConfig) {
+    console.log(
+      'Detected legacy ESLint config (e.g. .eslintrc*). Please migrate to `eslint.config.mjs` (flat config) and import @skyscanner/eslint-config-skyscanner as described in https://eslint.org/docs/latest/use/configure/migration-guide',
     );
   } else {
     fs.copyFileSync(
       path.join(__dirname, 'eslintrc.template'),
-      path.join(cwd, '.eslintrc.json'),
+      path.join(cwd, ESLINT_FLAT_CONFIG_FILE),
     );
-    console.log('We created `.eslintrc.json` for you.');
+    console.log('We created `eslint.config.mjs` for you.');
   }
 
   const hasExistingPrettierConfig =

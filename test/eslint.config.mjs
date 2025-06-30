@@ -1,5 +1,4 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import babelParser from "babel-eslint";
+import { defineConfig } from "eslint/config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import js from "@eslint/js";
@@ -13,10 +12,6 @@ const compat = new FlatCompat({
     allConfig: js.configs.all
 });
 
-export default defineConfig([globalIgnores(["**/test"]), {
-    extends: compat.extends("@skyscanner/eslint-config-skyscanner"),
-
-    languageOptions: {
-        parser: babelParser,
-    },
+export default defineConfig([{
+    extends: compat.extends("../index.js"),
 }]);
