@@ -47,7 +47,6 @@ module.exports = {
     'plugin:jest-formatting/strict',
     'plugin:react-hooks/recommended',
     'plugin:import/typescript',
-    'plugin:typescript-enum/recommended',
     'plugin:react/jsx-runtime',
   ],
   plugins: [
@@ -55,7 +54,6 @@ module.exports = {
     'prettier',
     'jest-formatting',
     'sort-destructure-keys',
-    'typescript-enum',
     '@skyscanner/rules',
   ],
   rules: {
@@ -315,6 +313,9 @@ module.exports = {
         'no-dupe-class-members': 'off',
         // 'tsc' already handles this (https://github.com/typescript-eslint/typescript-eslint/issues/477)
         'no-undef': 'off',
+
+        // Disallow using TypeScript's language feature of Enums. We only want to use type annotations never language features.
+        '@skyscanner/rules/no-enum': 'error',
 
         // Add TypeScript specific rules (and turn off ESLint equivalents)
         '@typescript-eslint/consistent-type-assertions': 'warn',
