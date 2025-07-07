@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.27.1",
-    "@babel/eslint-parser": "^7.27.0",
+    "@babel/eslint-parser": "^7.28.0",
     "@babel/preset-react": "^7.27.1",
     "@skyscanner/eslint-plugin-rules": "^1.4.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
