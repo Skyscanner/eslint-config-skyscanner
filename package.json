@@ -36,14 +36,11 @@
     "lint:js:fix": "eslint . --ext js --fix",
     "postinstall": "node ./main.js",
     "prepare": "husky install",
-    "spellcheck": "mdspell --report --en-gb --ignore-numbers --ignore-acronyms --no-suggestions",
-    "spellcheck:ci": "npm run spellcheck -- '**/*.md' '!LICENSE.md' '!**/node_modules/**/*.md'",
     "pretest": "npx ensure-node-env@2.0.0",
     "test": "(cd test && ./e2e-test.sh)"
   },
   "lint-staged": {
     "!(LICENSE)*.md": [
-      "npm run spellcheck",
       "prettier --write"
     ],
     "**/!(package|package-lock).json": "prettier --write",
@@ -78,7 +75,6 @@
   "devDependencies": {
     "husky": "^9.1.4",
     "jest": "^30.0.1",
-    "lint-staged": "^16.1.2",
-    "markdown-spellcheck": "^1.3.1"
+    "lint-staged": "^16.1.2"
   }
 }
