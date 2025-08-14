@@ -1,7 +1,0 @@
-{
-  "plugins": ["compat"],
-  "extends": ["./index.js", "plugin:compat/recommended"],
-  "env": {
-    "browser": true
-  }
-}
