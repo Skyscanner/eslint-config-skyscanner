@@ -48,7 +48,7 @@
     "**/*.yml": "prettier --write"
   },
   "dependencies": {
-    "@babel/core": "^7.27.1",
+    "@babel/core": "^7.28.3",
     "@babel/eslint-parser": "^7.27.0",
     "@babel/preset-react": "^7.27.1",
     "@skyscanner/eslint-plugin-rules": "^1.4.0",
