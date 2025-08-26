@@ -42,7 +42,6 @@ module.exports = {
   extends: [
     'airbnb',
     'prettier',
-    'plugin:compat/recommended',
     'plugin:eslint-comments/recommended',
     'plugin:jest/recommended',
     'plugin:jest-formatting/strict',
@@ -52,15 +51,11 @@ module.exports = {
   ],
   plugins: [
     'backpack',
-    'compat',
     'prettier',
     'jest-formatting',
     'sort-destructure-keys',
     '@skyscanner/rules',
   ],
-  env: {
-    browser: true,
-  },
   rules: {
     'prettier/prettier': 'error',
     'valid-jsdoc': ['error'],
