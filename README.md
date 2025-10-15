@@ -13,6 +13,23 @@ npm install --save-dev @skyscanner/eslint-config-skyscanner
 
 Add `"extends": "@skyscanner/eslint-config-skyscanner"` to your `.eslintrc`.
 
+"@skyscanner/eslint-config-skyscanner" currently uses the Jest configuration by default. If your project uses Vitest, you can use the `@skyscanner/eslint-config-skyscanner/vitest` to override test files configuration. For example:
+
+```json
+// .eslintrc.json
+{
+  "extends": ["@skyscanner/eslint-config-skyscanner"],
+  "overrides": [
+    {
+      "files": ["**/*.test.ts?(x)"],
+      "extends": ["@skyscanner/eslint-config-skyscanner/vitest"]
+    }
+  ]
+}
+```
+
+You can apply it directly at the root if your entire repository uses Vitest, or per project if only some projects, or parts of a project, use Vitest.
+
 ## React
 
 `@skyscanner/eslint-config-skyscanner` will try to detect automatically the version of React installed.
