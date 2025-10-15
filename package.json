@@ -75,6 +75,6 @@
   "devDependencies": {
     "husky": "^9.1.4",
     "jest": "^30.2.0",
-    "lint-staged": "^16.1.2"
+    "lint-staged": "^16.2.4"
   }
 }
