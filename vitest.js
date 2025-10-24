@@ -17,6 +17,7 @@ module.exports = {
   },
   plugins: ['@vitest'],
   rules: {
+    // Switch off all Jest rules
     'jest/no-large-snapshots': 'off',
     'jest/expect-expect': 'off',
     'jest/no-alias-methods': 'off',
@@ -37,6 +38,10 @@ module.exports = {
     'jest/valid-expect': 'off',
     'jest/valid-expect-in-promise': 'off',
     'jest/valid-title': 'off',
-    'vitest/no-large-snapshots': 'off',
+    // Replace with Vitest equivalent
+    '@vitest/no-large-snapshots': 'off',
+    // The vitest/recommended configuration differs slightly from jest/recommended so we are adding back in some rules that proved valuable
+    '@vitest/no-conditional-expect': 'error',
+    '@vitest/no-focused-tests': 'error',
   },
 };
