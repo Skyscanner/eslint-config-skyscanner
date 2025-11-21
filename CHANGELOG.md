@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Bump `eslint-plugin-backpack` to 7.1.0.
 - Enable backpack `use-button-v2` rule
 
-This update is intended to enforce migration from `BpkButton` (V1) to `BpkButtonV2` (V2). The rule show warning when importing `BpkButton` from `@skyscanner/backpack-web/bpk-component-button` and recommends using `BpkButtonV2` instead.
+This update is intended to enforce migration from `BpkButton` (V1) to `BpkButtonV2` (V2). The rule shows warning when importing `BpkButton` from `@skyscanner/backpack-web/bpk-component-button` and recommends using `BpkButtonV2` instead.
 
 # 15.0.0
 
