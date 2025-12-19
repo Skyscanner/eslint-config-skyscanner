@@ -64,7 +64,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^10.1.1",
     "eslint-import-resolver-typescript": "^4.4.2",
-    "eslint-plugin-backpack": "^7.1.0",
+    "eslint-plugin-backpack": "^7.2.0",
     "eslint-plugin-compat": "^6.0.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.32.0",

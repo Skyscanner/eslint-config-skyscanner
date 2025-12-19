@@ -5,6 +5,15 @@ This file remains for historical references, but all new releases are now docume
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+# 22.8.0
+
+## Changed
+
+- Bump `eslint-plugin-backpack` to 7.2.0.
+- Remove backpack `use-button-v2` rule
+
+This update is intended to remove use-button-v2 rule, as previous `BpkButton` (V1) has already removed, `BpkButtonV2` renamed to `BpkButton` and exported default.
+
 # 22.7.0
 
 ## Added
