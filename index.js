@@ -64,7 +64,6 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'valid-jsdoc': ['error'],
-    'backpack/use-button-v2': 'warn',
     'backpack/use-tokens': 'error',
     'backpack/use-components': 'off',
     '@skyscanner/rules/no-axios': 'error',
