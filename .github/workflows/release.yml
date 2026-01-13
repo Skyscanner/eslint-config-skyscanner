@@ -11,6 +11,8 @@ defaults:
 env:
   CACHE_NAME: node-modules-cache
 
+permissions: {}
+
 jobs:
   Create-NPM-Cache:
     runs-on: ubuntu-latest
