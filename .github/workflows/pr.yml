@@ -19,6 +19,7 @@ jobs:
   Create-NPM-Cache:
     runs-on: ubuntu-latest
     steps:
+      - uses: GitHubSecurityLab/actions-permissions/monitor@b25f731bf2f9eb9748c2e9757d366c3e72fa2109 # v1.0.2-beta8
       - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
