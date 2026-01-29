@@ -15,7 +15,9 @@ defaults:
 env:
   CACHE_NAME: node-modules-cache
 
-permissions: {}
+permissions:
+  id-token: write # Required for OIDC, Trusted Publishing to NPM
+  contents: read
 
 jobs:
   Create-NPM-Cache:
@@ -48,3 +50,34 @@ jobs:
       pull-requests: write
     needs: [Create-NPM-Cache]
     uses: ./.github/workflows/_test.yml
+
+  Release-Dev:
+    name: Release dev version to NPM
+    runs-on: ubuntu-latest
+    environment: Publishing
+    needs: [Create-NPM-Cache, Run-Tests]
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Restore Cache
+        uses: actions/cache/restore@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        id: npm-cache
+        with:
+          path: |
+            node_modules/
+          key: ${{ env.CACHE_NAME }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Publish dev NPM package
+        run: |
+          npm version 0.0.0-dev.pr${{ github.event.pull_request.number }}.${{ github.sha }} --no-git-tag-version
+          npm publish --tag dev
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
