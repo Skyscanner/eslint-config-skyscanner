@@ -77,7 +77,8 @@ jobs:
 
       - name: Publish dev NPM package
         run: |
-          npm version 0.0.0-dev.pr${{ github.event.pull_request.number }}.${{ github.sha }} --no-git-tag-version
+          npm version 0.0.0-dev.pr${{ github.event.pull_request.number }}.${{ github.run_id }}-${{ github.run_attempt }} --no-git-tag-version
           npm publish --tag dev
         env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
