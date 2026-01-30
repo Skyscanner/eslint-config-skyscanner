@@ -15,9 +15,7 @@ defaults:
 env:
   CACHE_NAME: node-modules-cache
 
-permissions:
-  id-token: write # Required for OIDC, Trusted Publishing to NPM
-  contents: read
+permissions: {}
 
 jobs:
   Create-NPM-Cache:
