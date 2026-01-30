@@ -4,9 +4,7 @@ on:
   release:
     types: [published]
 
-permissions:
-  id-token: write # Required for OIDC, Trusted Publishing to NPM
-  contents: read
+permissions: {}
 
 defaults:
   run:
@@ -27,9 +25,6 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
-
-      - name: Update npm for OIDC support (Trusted Publishing)
-        run: npm install -g npm@11.7.0
 
       - name: Upload to Cache
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
@@ -67,9 +62,6 @@ jobs:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Update npm for OIDC support (Trusted Publishing)
-        run: npm install -g npm@11.7.0
-
       - name: Restore Cache
         uses: actions/cache/restore@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         id: npm-cache
@@ -83,4 +75,5 @@ jobs:
           npm version $RELEASE_VERSION --no-git-tag-version
           npm publish
         env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           RELEASE_VERSION: ${{ github.event.release.tag_name }}
