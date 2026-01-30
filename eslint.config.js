@@ -12,24 +12,24 @@
  */
 
 import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import eslintCommentsConfigs from '@eslint-community/eslint-plugin-eslint-comments/configs';
+import skyscannerRulesPlugin from '@skyscanner/eslint-plugin-rules';
+import prettierConfig from 'eslint-config-prettier/flat';
+import backpackPlugin from 'eslint-plugin-backpack';
+import compatPlugin from 'eslint-plugin-compat';
+import importPlugin from 'eslint-plugin-import';
+import jestPlugin from 'eslint-plugin-jest';
+import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
+import prettierPlugin from 'eslint-plugin-prettier';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
-import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
-import importPlugin from 'eslint-plugin-import';
-import prettierConfig from 'eslint-config-prettier';
-import jestPlugin from 'eslint-plugin-jest';
-import compatPlugin from 'eslint-plugin-compat';
-import eslintCommentsConfigs from '@eslint-community/eslint-plugin-eslint-comments/configs';
-import backpackPlugin from 'eslint-plugin-backpack';
-import skyscannerRulesPlugin from '@skyscanner/eslint-plugin-rules';
 import sortDestructureKeysPlugin from 'eslint-plugin-sort-destructure-keys';
-import prettierPlugin from 'eslint-plugin-prettier';
 import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 import { baseRules } from './rules/index.js';
-import reactRules from './rules/react/react.js';
 import reactA11yRules from './rules/react/react-a11y.js';
+import reactRules from './rules/react/react.js';
 
 export default [
   // Base JS recommended
@@ -50,6 +50,7 @@ export default [
   jsxA11yPlugin.flatConfigs.recommended,
 
   // React Hooks plugin
+  reactHooksPlugin.configs.flat.recommended,
   {
     name: 'skyscanner/react-hooks',
     plugins: {
