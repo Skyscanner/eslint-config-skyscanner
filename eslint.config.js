@@ -50,12 +50,8 @@ export default [
   jsxA11yPlugin.flatConfigs.recommended,
 
   // React Hooks plugin
-  reactHooksPlugin.configs.flat.recommended,
   {
-    name: 'skyscanner/react-hooks',
-    plugins: {
-      'react-hooks': reactHooksPlugin,
-    },
+    ...reactHooksPlugin.configs.flat.recommended,
     rules: {
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
