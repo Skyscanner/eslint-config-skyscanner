@@ -35,10 +35,10 @@ export default [
   // Base JS recommended
   js.configs.recommended,
 
-  // Internalized airbnb-base rules
+  // Internalized airbnb-base rules (loaded before plugin configs)
   ...baseRules,
 
-  // Internalized airbnb react rules
+  // Internalized airbnb react rules (loaded before plugin configs)
   { name: 'skyscanner/react', ...reactRules },
   { name: 'skyscanner/react-a11y', ...reactA11yRules },
 
@@ -50,13 +50,7 @@ export default [
   jsxA11yPlugin.flatConfigs.recommended,
 
   // React Hooks plugin
-  {
-    ...reactHooksPlugin.configs.flat.recommended,
-    rules: {
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-    },
-  },
+  reactHooksPlugin.configs.flat.recommended,
 
   // Import plugin
   importPlugin.flatConfigs.recommended,
@@ -87,6 +81,7 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,
+        ...globals.node,
       },
       ecmaVersion: 2024,
       sourceType: 'module',
@@ -109,7 +104,7 @@ export default [
       'import/resolver': {
         typescript: {
           alwaysTryTypes: true,
-          project: ['./tsconfig.json', './packages/*/tsconfig.json'],
+          project: ['**/tsconfig.json'],
         },
         node: true,
       },
@@ -123,6 +118,9 @@ export default [
       // This rule is pretty restrictive and we feel this decision should be left to developers to decide on a case by case basis.
       // A file can contain more than one class and still have a single responsibility
       'max-classes-per-file': ['error', 3],
+
+      'react/display-name': 'off',
+      'react/jsx-uses-react': 'off',
 
       // defaultProps on function components is getting deprecated by React
       // and recommends to use defaultArguments instead
@@ -449,7 +447,7 @@ export default [
   // TypeScript declaration files
   {
     name: 'skyscanner/typescript-declarations',
-    files: ['*.d.ts'],
+    files: ['**/*.d.ts'],
     rules: {
       '@typescript-eslint/consistent-type-imports': [
         'error',
