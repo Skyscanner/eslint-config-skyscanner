@@ -388,7 +388,7 @@ After migration, you'll likely encounter new linting errors. **This is expected*
 
 ### `no-unused-vars` (Most Common)
 
-**What changed**: Stricter enforcement on JavaScript files for unused function parameters.
+**What changed**: Stricter enforcement on JavaScript files for unused function parameters. Usage with TypeScript is explicitly forbidden in the docs. v23 config has it disabled for TypeScript files. If your old config explicitly enabled it for TypeScript, that is the root cause of your errors.
 
 **The error**:
 
@@ -400,7 +400,7 @@ function handleClick(event, date, type) {
 }
 ```
 
-**How to fix**: Prefix unused parameters with underscore:
+**How to fix**: (in JavaScript files only) Prefix unused parameters with underscore:
 
 ```javascript
 // ✅ FIXED
