@@ -1,8 +1,9 @@
 {
   "name": "@skyscanner/eslint-config-skyscanner",
-  "version": "15.0.0",
+  "version": "23.0.0",
   "description": "Skyscanner's ESLint config.",
   "license": "Apache-2.0",
+  "type": "module",
   "engines": {
     "node": ">=18.18.0",
     "npm": ">=9.8.1"
@@ -27,20 +28,17 @@
     "javascript",
     "styleguide"
   ],
-  "bin": "main.js",
-  "main": "index.js",
+  "main": "eslint.config.js",
   "exports": {
-    ".": "./index.js",
+    ".": "./eslint.config.js",
     "./vitest": "./vitest.js"
   },
   "scripts": {
     "lint": "npm run lint:js",
     "lint-staged": "lint-staged",
-    "lint:js": "eslint . --ext js",
-    "lint:js:fix": "eslint . --ext js --fix",
-    "postinstall": "node ./main.js",
+    "lint:js": "eslint . -c eslint.config.self.js",
+    "lint:js:fix": "eslint . -c eslint.config.self.js --fix",
     "prepare": "husky install",
-    "pretest": "npx ensure-node-env@2.0.0",
     "test": "(cd test && ./e2e-test.sh)"
   },
   "lint-staged": {
@@ -52,34 +50,32 @@
     "**/*.yml": "prettier --write"
   },
   "dependencies": {
-    "@babel/core": "^7.28.4",
-    "@babel/eslint-parser": "^7.28.4",
-    "@babel/preset-react": "^7.28.5",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.6.0",
+    "@eslint/js": "^9.39.2",
     "@skyscanner/eslint-plugin-rules": "^1.4.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
     "@vitest/eslint-plugin": "^1.6.6",
-    "colors": "^1.4.0",
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-import-resolver-typescript": "^4.4.2",
-    "eslint-plugin-backpack": "^7.2.0",
-    "eslint-plugin-compat": "^6.0.2",
-    "eslint-plugin-eslint-comments": "^3.2.0",
+    "confusing-browser-globals": "^1.0.11",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-backpack": "^7.4.0",
+    "eslint-plugin-compat": "^6.1.0",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jest": "^28.14.0",
-    "eslint-plugin-jest-formatting": "^3.1.0",
+    "eslint-plugin-jest": "^29.12.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.5.1",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
-    "prettier": "^3.7.4"
+    "globals": "^17.2.0",
+    "prettier": "^3.8.1",
+    "typescript-eslint": "^8.54.0"
   },
   "devDependencies": {
-    "husky": "^9.1.4",
+    "husky": "^9.1.7",
     "jest": "^30.2.0",
-    "lint-staged": "^16.2.4"
+    "lint-staged": "^16.2.7"
   }
 }
