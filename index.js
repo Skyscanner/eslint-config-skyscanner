@@ -57,6 +57,7 @@ module.exports = {
     'jest-formatting',
     'sort-destructure-keys',
     '@skyscanner/rules',
+    '@eslint-react',
   ],
   env: {
     browser: true,
@@ -249,6 +250,12 @@ module.exports = {
     // https://eslint.org/docs/rules/no-restricted-syntax
     // should be similar to https://github.com/airbnb/javascript/blob/37d48dbf6082bd8958fdc5db5df207bb1166d653/packages/eslint-config-airbnb-base/rules/style.js#L337-L357
     // however, missing the ForOfStatement rule as we don't support IE11 (so we don't need the polyfill) and aren't currently opinionated about loops
+    // The React 19 entries below catch patterns that neither `@eslint-react/no-default-props`
+    // (function-component-only) nor `react/no-deprecated` (no legacy-context coverage)
+    // detect. They are at `error` severity because `no-restricted-syntax` takes a single
+    // severity, and the pre-existing entries warrant it; the R19 patterns are also
+    // silently broken in React 19 (class `defaultProps` stops applying; legacy context
+    // is fully removed), which arguably justifies `error` over `warn` anyway.
     'no-restricted-syntax': [
       'error',
       {
@@ -266,25 +273,73 @@ module.exports = {
         message:
           '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
       },
+      {
+        selector: 'PropertyDefinition[static=true][key.name="defaultProps"]',
+        message:
+          'React 19: `static defaultProps` on class components silently stops applying. Convert to a function component with ES6 default parameters.',
+      },
+      {
+        selector:
+          'PropertyDefinition[static=true][key.name=/^(contextTypes|childContextTypes)$/]',
+        message:
+          'React 19: legacy context (`contextTypes` / `childContextTypes`) is removed. Migrate to `React.createContext`.',
+      },
+      {
+        selector: 'MethodDefinition[key.name="getChildContext"]',
+        message:
+          'React 19: legacy context (`getChildContext`) is removed. Migrate to `React.createContext`.',
+      },
     ],
 
-    // This ensures that the 'preferred style' is used for react imports:
-    // "
-    //   Change all default React imports (i.e. import React from "react") to destructured
-    //   named imports (ex. import { useState } from "react") which is the preferred style
-    //   going into the future.
-    // "
-    // There is a codemod here created by the react team to change this in your codebase:
-    // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-react-imports
+    // This ensures that the 'preferred style' is used for react imports, and flags
+    // React 19 import-site removals/renames so consumers catch them before upgrading:
+    // - The default React import is discouraged in favour of destructured named imports
+    //   (codemod: https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-react-imports).
+    // - `react-dom/test-utils` no longer exports `act` in React 19 — it moves to `react`.
+    // - `useFormState` is renamed to `useActionState` and moves from `react-dom` to `react` in React 19.
     'no-restricted-imports': [
       'error',
       {
-        name: 'react',
-        importNames: ['default'],
-        message:
-          "Please import directly (e.g. import { useEffect } from 'react').",
+        paths: [
+          {
+            name: 'react',
+            importNames: ['default'],
+            message:
+              "Please import directly (e.g. import { useEffect } from 'react').",
+          },
+          {
+            name: 'react-dom/test-utils',
+            message:
+              "React 19 removes `act` from react-dom/test-utils. Import `act` from 'react' instead.",
+          },
+          {
+            name: 'react-dom',
+            importNames: ['useFormState'],
+            message:
+              "`useFormState` is renamed to `useActionState` in React 19 and moves to 'react'.",
+          },
+        ],
       },
     ],
+
+    // React 19 pre-upgrade warnings. Shipped at `warn` so squads get early signal
+    // without blocking CI; a later major can flip R19-blockers to `error`.
+    // See https://eslint-react.xyz/ for rule documentation.
+    '@eslint-react/no-default-props': 'warn',
+    '@eslint-react/no-forward-ref': 'warn',
+    '@eslint-react/no-unstable-context-value': 'warn',
+    '@eslint-react/no-unstable-default-props': 'warn',
+    // NOTE: `@eslint-react/no-leaked-conditional-rendering` was considered here but
+    // requires typed linting (parserOptions.project). Enabling it would force every
+    // downstream consumer to stand up a TS project-service config, which is far
+    // outside the scope of this change. Consumers who want it can opt in locally.
+
+    // Re-declared from eslint-plugin-react (transitively enabled by airbnb) at the
+    // consistent `warn` severity used for R19 pre-upgrade signal, and to decouple
+    // from airbnb's future defaults.
+    'react/no-deprecated': 'warn',
+    'react/no-string-refs': 'warn',
+    'react/no-find-dom-node': 'warn',
 
     // Require object destructure key to be sorted
     // https://github.com/mthadley/eslint-plugin-sort-destructure-keys
