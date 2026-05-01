@@ -29,14 +29,14 @@ You can apply it directly at the root if your entire repository uses Vitest, or 
 
 ## React
 
-`@skyscanner/eslint-config-skyscanner` will try to detect automatically the version of React installed.
+`@skyscanner/eslint-config-skyscanner` supports **React 18+** (React 17 support was dropped in v16.0.0). It will try to detect automatically the version of React installed.
 
 If your project doesn't use it, or it is not installed in the same `package.json` as `@skyscanner/eslint-config-skyscanner`, it must be manually set in `.eslintrc`:
 
 ```
 "settings": {
   "react": {
-    "version": "16.4"
+    "version": "18.3"
   }
 }
 ```
@@ -44,7 +44,9 @@ If your project doesn't use it, or it is not installed in the same `package.json
 ## Browser compatibility
 
 This eslint configuration includes the [compat plugin](https://github.com/amilajack/eslint-plugin-compat) to ensure browser compatibility based on your defined browserslist. In case of no browserslist defined, default values are taken into account, which may not be the exact ones you would expect. If your repository experiences issues regarding browser compatibility which are not relevant to your project, solve them by applying one of these two solutions:
+
 - If the repository only contains **server side code** and browser compatibility doesn't apply, disable the plugin entirely:
+
 ```json
 // .eslintrc
 {
@@ -56,7 +58,9 @@ This eslint configuration includes the [compat plugin](https://github.com/amilaj
   }
 }
 ```
+
 - If the repository contains client side code, define a **browserslist** in your `package.json` by extending `browserslist-config-skyscanner`, which defines the current browser support required by Skyscanner:
+
 ```json
 // package.json
 {
