@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-vars,import/no-unresolved,import/extensions,import/no-extraneous-dependencies */
 import React, { forwardRef, Ref } from 'react';
-import { useFormState } from 'react-dom';
-import { act } from 'react-dom/test-utils';
 /* eslint-enable no-unused-vars,import/no-unresolved,import/extensions,import/no-extraneous-dependencies */
 
 // no-restricted-imports: default React import is disallowed
@@ -31,13 +29,5 @@ const List = ({ items = [] }: { items?: string[] }) => (
   <ul>{items.map((i) => <li key={i}>{i}</li>)}</ul>
 );
 
-// no-restricted-imports: `act` moved from react-dom/test-utils to react in R19
-// no-restricted-imports: useFormState renamed to useActionState and moves to react in R19
-const useActForm = () => {
-  const [state] = useFormState((s: unknown) => s, null);
-  act(() => {});
-  return state;
-};
-
 export default CustomComponent;
-export { Greeter, Input, List, useActForm };
+export { Greeter, Input, List };

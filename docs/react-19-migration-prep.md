@@ -2,19 +2,19 @@
 
 `@skyscanner/eslint-config-skyscanner` layers in a set of lint-level signals to help codebases prepare for React 19 _before_ the upgrade itself lands. This page documents what each signal catches, why it's on, and how to act.
 
-The goal is **visibility**: squads see the backlog in their IDE and CI now, while still on React 18, instead of discovering it at upgrade time. Most signals ship at `warn` so they surface without blocking builds. A small number are at `error` — specifically the `no-restricted-imports` entries — because they target React 19 hard-breakers whose fix is a one-line import change (often available as a codemod). Those will fail CI on affected repos; the rest will not.
+The goal is **visibility**: squads see the backlog in their IDE and CI now, while still on React 18, instead of discovering it at upgrade time. All signals listed here ship at `warn` so upgrading this config surfaces the backlog without breaking any consumer's build.
 
 ## What's enabled
 
-| Rule / restriction                                                         | Severity | Covers                                                               |
-| -------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------- |
-| [`@eslint-react/no-default-props`](#no-default-props-function-components)  | `warn`   | `FnComponent.defaultProps = {}` on function components               |
-| [`@eslint-react/no-forward-ref`](#no-forward-ref)                          | `warn`   | `forwardRef(...)` usage (no longer required in R19)                  |
-| [`@eslint-react/no-unstable-default-props`](#no-unstable-default-props)    | `warn`   | Array / object literal defaults in destructuring                     |
-| [`no-restricted-imports` — `react-dom/test-utils`](#react-domtest-utils)   | `error`  | `import … from 'react-dom/test-utils'` (R19 removes `act` from here) |
-| [`no-restricted-imports` — `useFormState` from `react-dom`](#useformstate) | `error`  | `import { useFormState } from 'react-dom'`                           |
+| Rule                                                                      | Severity | Covers                                                 |
+| ------------------------------------------------------------------------- | -------- | ------------------------------------------------------ |
+| [`@eslint-react/no-default-props`](#no-default-props-function-components) | `warn`   | `FnComponent.defaultProps = {}` on function components |
+| [`@eslint-react/no-forward-ref`](#no-forward-ref)                         | `warn`   | `forwardRef(...)` usage (no longer required in R19)    |
+| [`@eslint-react/no-unstable-default-props`](#no-unstable-default-props)   | `warn`   | Array / object literal defaults in destructuring       |
 
 The existing airbnb-enabled `react/no-deprecated`, `react/no-string-refs`, and `react/no-find-dom-node` rules are already at `error` and cover `ReactDOM.render` / `ReactDOM.hydrate`, string refs, and `findDOMNode` respectively — you don't need to do anything extra for those.
+
+Other React 19 breaking changes — notably `act` moving from `react-dom/test-utils` to `react`, and `useFormState` being renamed to `useActionState` and moved to `react` — are **not** currently linted by this config. They'll surface naturally when a repo bumps `react` to 19. [`npx codemod react/19/migration-recipe`](https://react.dev/blog/2024/04/25/react-19-upgrade-guide) applies the most common migrations in one pass.
 
 ---
 
@@ -107,42 +107,6 @@ Hoist the default to a module-level constant:
 const EMPTY_LIST: string[] = [];
 const List = ({ items = EMPTY_LIST }) => items.map((i) => <Item key={i} />);
 ```
-
----
-
-## `no-restricted-imports` entries
-
-### `react-dom/test-utils`
-
-React 19 removes `act` from `react-dom/test-utils`. It now lives on `react`.
-
-```jsx
-// Before — flagged
-import { act } from 'react-dom/test-utils';
-
-// After
-import { act } from 'react';
-```
-
-There's a codemod that does this automatically for a whole repo:
-
-```
-npx codemod react/19/replace-act-import
-```
-
-### `useFormState`
-
-`useFormState` from `react-dom` is renamed to `useActionState` and moves to `react`:
-
-```jsx
-// Before — flagged
-import { useFormState } from 'react-dom';
-
-// After
-import { useActionState } from 'react';
-```
-
-The rename includes a signature tweak — see the [React 19 upgrade guide — `useFormState` → `useActionState`](https://react.dev/blog/2024/04/25/react-19-upgrade-guide#useformstate-has-been-replaced-by-useactionstate) for call-site changes.
 
 ---
 

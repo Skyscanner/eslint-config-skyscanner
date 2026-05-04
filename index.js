@@ -289,40 +289,21 @@ module.exports = {
       },
     ],
 
-    // Import-site policy, with React 19 pre-upgrade entries layered in:
-    //
-    // - Default React import is discouraged in favour of destructured named imports
-    //   (codemod: https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-react-imports).
-    // - `react-dom/test-utils` no longer exports `act` in React 19 — it moves to `react`
-    //   (codemod: `npx codemod react/19/replace-act-import`).
-    // - `useFormState` is renamed to `useActionState` and moves from `react-dom` to
-    //   `react` in React 19.
-    //
-    // Severity stays at `error` (existing level) — these patterns will hard-fail on
-    // R19 regardless, and the fixes are mechanical one-line changes.
+    // This ensures that the 'preferred style' is used for react imports:
+    // "
+    //   Change all default React imports (i.e. import React from "react") to destructured
+    //   named imports (ex. import { useState } from "react") which is the preferred style
+    //   going into the future.
+    // "
+    // There is a codemod here created by the react team to change this in your codebase:
+    // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-react-imports
     'no-restricted-imports': [
       'error',
       {
-        paths: [
-          {
-            name: 'react',
-            importNames: ['default'],
-            message:
-              "Please import directly (e.g. import { useEffect } from 'react').",
-          },
-          {
-            name: 'react-dom/test-utils',
-            importNames: ['act'],
-            message:
-              "React 19 removes `act` from react-dom/test-utils. Import `act` from 'react' instead.",
-          },
-          {
-            name: 'react-dom',
-            importNames: ['useFormState'],
-            message:
-              "`useFormState` is renamed to `useActionState` in React 19 and moves to 'react'.",
-          },
-        ],
+        name: 'react',
+        importNames: ['default'],
+        message:
+          "Please import directly (e.g. import { useEffect } from 'react').",
       },
     ],
 
