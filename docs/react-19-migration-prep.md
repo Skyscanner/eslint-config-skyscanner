@@ -2,7 +2,7 @@
 
 `@skyscanner/eslint-config-skyscanner` layers in a set of lint-level signals to help codebases prepare for React 19 _before_ the upgrade itself lands. This page documents what each signal catches, why it's on, and how to act.
 
-The goal is **visibility**: squads see the backlog in their IDE and CI now, while still on React 18, instead of discovering it at upgrade time. Most of the React 19 pre-upgrade signal ships at `warn` severity so these additions never break a consumer's build.
+The goal is **visibility**: squads see the backlog in their IDE and CI now, while still on React 18, instead of discovering it at upgrade time. Most signals ship at `warn` so they surface without blocking builds. A small number are at `error` — specifically the `no-restricted-imports` entries — because they target React 19 hard-breakers whose fix is a one-line import change (often available as a codemod). Those will fail CI on affected repos; the rest will not.
 
 ## What's enabled
 

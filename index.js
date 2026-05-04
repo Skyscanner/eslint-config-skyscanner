@@ -312,6 +312,7 @@ module.exports = {
           },
           {
             name: 'react-dom/test-utils',
+            importNames: ['act'],
             message:
               "React 19 removes `act` from react-dom/test-utils. Import `act` from 'react' instead.",
           },
