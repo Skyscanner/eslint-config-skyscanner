@@ -1,16 +1,18 @@
 # React 19: `defaultProps` warning
 
-Starting in **v15.1.0**, `@skyscanner/eslint-config-skyscanner` enables [`@eslint-react/no-default-props`](https://eslint-react.xyz/docs/rules/no-default-props) at `warn` severity. This page explains why and how to act on the warning.
+`@skyscanner/eslint-config-skyscanner` enables [`@eslint-react/no-default-props`](https://eslint-react.xyz/docs/rules/no-default-props) at `warn` severity. This page explains why and how to act on the warning.
 
 ## Why this warning now
 
-React 19 **removes `defaultProps` on function components**. Code that relies on it will silently stop applying default values after the upgrade — no error is thrown, the prop is just `undefined`. Upstream rationale and migration notes:
+React 19 **removes `defaultProps` on function components**. Code that relies on it will silently stop applying default values after the upgrade — no error is thrown, the prop is just `undefined`. From the upstream upgrade guide:
 
-- [React 19 upgrade guide — Removed: `defaultProps` for function components](https://react.dev/blog/2024/04/25/react-19-upgrade-guide#removed-defaultprops-for-function-components)
+> We're also removing `defaultProps` from function components in place of ES6 default parameters. Class components will continue to support `defaultProps` since there is no ES6 alternative.
+>
+> — [React 19 upgrade guide — `defaultProps`](https://react.dev/blog/2024/04/25/react-19-upgrade-guide#removed-defaultprops-for-function-components)
 
 Surfacing this now — while teams are still on React 18 — gives every Skyscanner React codebase an inline IDE and CI signal about call-sites that need attention, so the upgrade work is already in progress by the time a repo bumps `react`.
 
-Severity is deliberately `warn`, not `error`: the goal of this release is **visibility**, not blocking builds. A future major of this config may promote the rule to `error` once the fleet is clean.
+Severity is deliberately `warn`, not `error`: the goal is **visibility**, not blocking builds. A future major of this config may promote the rule to `error` once the fleet is clean.
 
 ## What this rule catches
 
@@ -22,32 +24,13 @@ const Banner = ({ message }) => <div>{message}</div>;
 Banner.defaultProps = { message: 'Hello' };
 ```
 
-## What this rule does NOT catch — read this
+## What about class components?
 
-The rule’s AST matcher only fires on the function-component assignment form above. It does **not** catch the following patterns, which are **also** incompatible with React 19:
-
-1. **Class components with `static defaultProps`**:
-
-   ```jsx
-   class Greeting extends Component {
-     static defaultProps = { name: 'World' };
-     render() {
-       return <div>Hello {this.props.name}</div>;
-     }
-   }
-   ```
-
-   These silently stop applying defaults in R19 just like the function form, but `@eslint-react/no-default-props` won’t flag them. Audit class components manually (grep `static defaultProps` / `\.defaultProps = `).
-
-2. **Setting defaults via `Object.defineProperty` or other dynamic shapes.** Rare in our codebases, but worth calling out.
-
-A follow-up release of this config will likely add coverage for class `static defaultProps` via a `no-restricted-syntax` selector; until then, treat the rule as a partial safety net, not a complete one.
+Class components — including `static defaultProps` — **continue to work in React 19**; the upgrade guide explicitly exempts them. The rule does not flag them and you do not need to migrate them for the React 19 upgrade. (React may deprecate class `defaultProps` in a future major; this is not a React 19 concern.)
 
 ## Remediation
 
-Replace `defaultProps` with **ES6 default parameters** via destructuring. This is what React 19 recommends and is the form `react/require-default-props` (already set to `error` in this config with `functions: 'defaultArguments'`) will accept going forward.
-
-### Function component
+Replace function-component `defaultProps` with **ES6 default parameters** via destructuring. This is what React 19 recommends and is the form `react/require-default-props` (already set to `error` in this config with `functions: 'defaultArguments'`) will accept going forward.
 
 Before:
 
@@ -68,30 +51,9 @@ const Banner = ({ message = 'Hello', tone = 'info' }) => (
 );
 ```
 
-### Class component (not flagged, but still requires the same fix)
-
-Before:
-
-```jsx
-class Greeting extends Component {
-  static defaultProps = { name: 'World' };
-  render() {
-    return <div>Hello {this.props.name}</div>;
-  }
-}
-```
-
-After (convert to a function component with default parameters):
-
-```jsx
-const Greeting = ({ name = 'World' }) => <div>Hello {name}</div>;
-```
-
-If the class has lifecycle methods or state that genuinely needs a class, preserve them but move defaults into a constructor-bound helper or a wrapping function component that applies defaults before rendering the class.
-
 ## Opting out in legacy code
 
-If a file is genuinely stuck on the old pattern and can’t be migrated in this PR, suppress locally with an `eslint-disable` comment and link to the owning ticket:
+If a file is genuinely stuck on the old pattern and can't be migrated in this PR, suppress locally with an `eslint-disable` comment and link to the owning ticket:
 
 ```jsx
 // eslint-disable-next-line @eslint-react/no-default-props -- tracked in LOOM-1234

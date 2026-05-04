@@ -89,7 +89,7 @@ module.exports = {
     // builds; a later major can flip to `error` once downstream repos are clean.
     // Note: this rule only detects the function-component assignment form
     // (`FnComponent.defaultProps = {}`). Class `static defaultProps` is NOT caught —
-    // see docs/migration-react-19-defaultprops.md for why and for remediation guidance.
+    // see docs/react-19-default-props.md for why and for remediation guidance.
     '@eslint-react/no-default-props': 'warn',
 
     // This rule is purely subjective and for consistency sake.
