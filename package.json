@@ -4,7 +4,7 @@
   "description": "Skyscanner's ESLint config.",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=18.18.0",
+    "node": ">=20.19.0",
     "npm": ">=9.8.1"
   },
   "repository": {
