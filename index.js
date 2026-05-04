@@ -89,8 +89,20 @@ module.exports = {
     // builds; a later major can flip to `error` once downstream repos are clean.
     // Note: this rule only detects the function-component assignment form
     // (`FnComponent.defaultProps = {}`). Class `static defaultProps` is NOT caught —
-    // see docs/react-19-default-props.md for why and for remediation guidance.
+    // see docs/react-19-migration-prep.md for why and for remediation guidance.
     '@eslint-react/no-default-props': 'warn',
+
+    // React 19 makes `forwardRef` unnecessary — refs can be a regular prop. Flag
+    // existing `forwardRef(...)` call-sites at `warn` so squads can clean them up
+    // during the upgrade. Non-breaking: `forwardRef` still works in R19.
+    '@eslint-react/no-forward-ref': 'warn',
+
+    // Concurrent rendering hygiene: flags object/array literals used as default
+    // prop values in destructuring (e.g. `({ items = [] }) => ...`), which re-
+    // create on every render and can break memoization in R19 concurrent mode.
+    // Not strictly R19-breaking, but surfaces a known perf footgun at the same
+    // time as the other R19 signal.
+    '@eslint-react/no-unstable-default-props': 'warn',
 
     // This rule is purely subjective and for consistency sake.
     // The impact of turning this on outweighs our perceived benefit of enforcing it
@@ -277,21 +289,39 @@ module.exports = {
       },
     ],
 
-    // This ensures that the 'preferred style' is used for react imports:
-    // "
-    //   Change all default React imports (i.e. import React from "react") to destructured
-    //   named imports (ex. import { useState } from "react") which is the preferred style
-    //   going into the future.
-    // "
-    // There is a codemod here created by the react team to change this in your codebase:
-    // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-react-imports
+    // Import-site policy, with React 19 pre-upgrade entries layered in:
+    //
+    // - Default React import is discouraged in favour of destructured named imports
+    //   (codemod: https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-react-imports).
+    // - `react-dom/test-utils` no longer exports `act` in React 19 — it moves to `react`
+    //   (codemod: `npx codemod react/19/replace-act-import`).
+    // - `useFormState` is renamed to `useActionState` and moves from `react-dom` to
+    //   `react` in React 19.
+    //
+    // Severity stays at `error` (existing level) — these patterns will hard-fail on
+    // R19 regardless, and the fixes are mechanical one-line changes.
     'no-restricted-imports': [
       'error',
       {
-        name: 'react',
-        importNames: ['default'],
-        message:
-          "Please import directly (e.g. import { useEffect } from 'react').",
+        paths: [
+          {
+            name: 'react',
+            importNames: ['default'],
+            message:
+              "Please import directly (e.g. import { useEffect } from 'react').",
+          },
+          {
+            name: 'react-dom/test-utils',
+            message:
+              "React 19 removes `act` from react-dom/test-utils. Import `act` from 'react' instead.",
+          },
+          {
+            name: 'react-dom',
+            importNames: ['useFormState'],
+            message:
+              "`useFormState` is renamed to `useActionState` in React 19 and moves to 'react'.",
+          },
+        ],
       },
     ],
 

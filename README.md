@@ -4,6 +4,8 @@ This package includes the shareable ESLint configuration used by Skyscanner.
 
 ## Installation
 
+This package requires Node.js `20.19.0` or newer.
+
 ```bash
 npm install --save-dev @skyscanner/eslint-config-skyscanner
 ```
@@ -44,7 +46,9 @@ If your project doesn't use it, or it is not installed in the same `package.json
 ## Browser compatibility
 
 This eslint configuration includes the [compat plugin](https://github.com/amilajack/eslint-plugin-compat) to ensure browser compatibility based on your defined browserslist. In case of no browserslist defined, default values are taken into account, which may not be the exact ones you would expect. If your repository experiences issues regarding browser compatibility which are not relevant to your project, solve them by applying one of these two solutions:
+
 - If the repository only contains **server side code** and browser compatibility doesn't apply, disable the plugin entirely:
+
 ```json
 // .eslintrc
 {
@@ -56,7 +60,9 @@ This eslint configuration includes the [compat plugin](https://github.com/amilaj
   }
 }
 ```
+
 - If the repository contains client side code, define a **browserslist** in your `package.json` by extending `browserslist-config-skyscanner`, which defines the current browser support required by Skyscanner:
+
 ```json
 // package.json
 {
