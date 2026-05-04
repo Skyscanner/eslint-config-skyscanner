@@ -14,7 +14,7 @@
     "test:fail-jsdoc": "echo 'Expecting failure' && eslint jsdoc-fail.js; if [ $? -eq 1 ]; then exit 0; fi",
     "test:fail-bpk": "echo 'Expecting failure' && eslint bpk-token-fail.jsx; if [ $? -eq 1 ]; then exit 0; fi",
     "test:fail-prettier": "echo 'Expecting failure' && eslint prettier-fail.jsx; if [ $? -eq 1 ]; then exit 0; fi",
-    "test:fail-react": "echo 'Expecting failure' && eslint react-fail.tsx; if [ $? -eq 1 ]; then exit 0; fi",
+    "test:fail-react": "echo 'Expecting failure' && eslint --max-warnings=0 react-fail.tsx; if [ $? -eq 1 ]; then exit 0; fi",
     "test:fail-import-order": "echo 'Expecting failure' && eslint order-fail.jsx; if [ $? -eq 1 ]; then exit 0; fi",
     "test:fail-no-axios": "echo 'Expecting failure' && eslint no-axios-fail.jsx; if [ $? -eq 1 ]; then exit 0; fi",
     "test:fail-compat": "echo 'Expecting failure' && eslint no-browser-fail.jsx; if [ $? -eq 1 ]; then exit 0; fi",

@@ -57,6 +57,7 @@ module.exports = {
     'jest-formatting',
     'sort-destructure-keys',
     '@skyscanner/rules',
+    '@eslint-react',
   ],
   env: {
     browser: true,
@@ -82,6 +83,14 @@ module.exports = {
         functions: 'defaultArguments',
       },
     ],
+
+    // React 19 pre-upgrade signal: flags `FnComponent.defaultProps = {}` on function
+    // components. Shipped at `warn` so squads see the issue in IDE/CI without breaking
+    // builds; a later major can flip to `error` once downstream repos are clean.
+    // Note: this rule only detects the function-component assignment form
+    // (`FnComponent.defaultProps = {}`). Class `static defaultProps` is NOT caught —
+    // see docs/react-19-default-props.md for why and for remediation guidance.
+    '@eslint-react/no-default-props': 'warn',
 
     // This rule is purely subjective and for consistency sake.
     // The impact of turning this on outweighs our perceived benefit of enforcing it
