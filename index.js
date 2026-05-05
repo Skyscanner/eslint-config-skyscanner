@@ -89,8 +89,20 @@ module.exports = {
     // builds; a later major can flip to `error` once downstream repos are clean.
     // Note: this rule only detects the function-component assignment form
     // (`FnComponent.defaultProps = {}`). Class `static defaultProps` is NOT caught —
-    // see docs/react-19-default-props.md for why and for remediation guidance.
+    // see docs/react-19-migration-prep.md for why and for remediation guidance.
     '@eslint-react/no-default-props': 'warn',
+
+    // React 19 makes `forwardRef` unnecessary — refs can be a regular prop. Flag
+    // existing `forwardRef(...)` call-sites at `warn` so squads can clean them up
+    // during the upgrade. Non-breaking: `forwardRef` still works in R19.
+    '@eslint-react/no-forward-ref': 'warn',
+
+    // Concurrent rendering hygiene: flags object/array literals used as default
+    // prop values in destructuring (e.g. `({ items = [] }) => ...`), which re-
+    // create on every render and can break memoization in R19 concurrent mode.
+    // Not strictly R19-breaking, but surfaces a known perf footgun at the same
+    // time as the other R19 signal.
+    '@eslint-react/no-unstable-default-props': 'warn',
 
     // This rule is purely subjective and for consistency sake.
     // The impact of turning this on outweighs our perceived benefit of enforcing it
