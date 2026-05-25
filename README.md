@@ -31,14 +31,16 @@ You can apply it directly at the root if your entire repository uses Vitest, or 
 
 ## React
 
-`@skyscanner/eslint-config-skyscanner` will try to detect automatically the version of React installed.
+`@skyscanner/eslint-config-skyscanner` supports React `^18.3.1 || ^19.2.5`.
+
+It will try to detect automatically the version of React installed.
 
 If your project doesn't use it, or it is not installed in the same `package.json` as `@skyscanner/eslint-config-skyscanner`, it must be manually set in `.eslintrc`:
 
 ```
 "settings": {
   "react": {
-    "version": "16.4"
+    "version": "18.3"
   }
 }
 ```
