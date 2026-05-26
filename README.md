@@ -31,7 +31,7 @@ You can apply it directly at the root if your entire repository uses Vitest, or 
 
 ## React
 
-`@skyscanner/eslint-config-skyscanner` supports React `^18.3.1 || ^19.2.5`.
+`@skyscanner/eslint-config-skyscanner` supports React `18.3.1 - 19.2.5`.
 
 It will try to detect automatically the version of React installed.
 
