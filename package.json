@@ -82,5 +82,13 @@
     "husky": "^9.1.4",
     "jest": "^30.3.0",
     "lint-staged": "^16.4.0"
+  },
+  "peerDependencies": {
+    "react": "18.3.1 - 19.2.5",
+    "react-dom": "18.3.1 - 19.2.5"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true },
+    "react-dom": { "optional": true }
   }
 }
