@@ -1,4 +1,5 @@
 node_modules
-npm-debug.log
+pnpm-debug.log*
+package-lock.json
 test/package-lock.json
 .idea

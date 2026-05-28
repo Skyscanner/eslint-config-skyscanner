@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-npm install --no-shrinkwrap --no-package-lock
+pnpm install --no-lockfile
 
-npm test
+pnpm test
