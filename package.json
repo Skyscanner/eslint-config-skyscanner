@@ -41,7 +41,6 @@
     "lint:js:fix": "eslint . --ext js --fix",
     "postinstall": "node ./main.js",
     "prepare": "husky install",
-    "pretest": "npx ensure-node-env@2.0.0",
     "test": "(cd test && ./e2e-test.sh)"
   },
   "lint-staged": {
