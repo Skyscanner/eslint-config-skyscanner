@@ -62,6 +62,7 @@
     "@vitest/eslint-plugin": "^1.6.6",
     "colors": "^1.4.0",
     "eslint": "^9.39.4",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^10.1.1",
     "eslint-import-resolver-typescript": "^4.4.2",
     "eslint-plugin-backpack": "^7.4.0",
