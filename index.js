@@ -373,6 +373,7 @@ module.exports = {
           'warn',
           {
             args: 'none',
+            caughtErrors: 'none',
             ignoreRestSiblings: true,
           },
         ],
