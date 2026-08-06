@@ -84,11 +84,15 @@
     "lint-staged": "^17.0.4"
   },
   "peerDependencies": {
-    "react": "18.3.1 - 19.2.5",
-    "react-dom": "18.3.1 - 19.2.5"
+    "react": "^18.3.1 || ^19.2.5",
+    "react-dom": "^18.3.1 || ^19.2.5"
   },
   "peerDependenciesMeta": {
-    "react": { "optional": true },
-    "react-dom": { "optional": true }
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
   }
 }
