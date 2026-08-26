@@ -1,0 +1,11 @@
+---
+version: '1'
+type: library
+component:
+  name: eslint-config-skyscanner
+  owner: beetlejuice
+  description: Skyscanner's shared ESLint configuration.
+  personalDataHandling: none
+  soxScope: False
+  paymentProcessing: False
+  serviceClass: economy-class
