@@ -1,6 +1,7 @@
 {
   "name": "eslint-config-skyscanner-test",
   "version": "0.0.0",
+  "type": "module",
   "description": "Test fixture",
   "main": "e2e-test.sh",
   "repository": {
