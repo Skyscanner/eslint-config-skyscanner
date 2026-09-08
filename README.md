@@ -4,6 +4,8 @@ This package includes the shareable ESLint configuration used by Skyscanner.
 
 ## Installation
 
+This package requires Node.js `20.19.0` or newer.
+
 ```bash
 npm install --save-dev @skyscanner/eslint-config-skyscanner
 ```
@@ -61,7 +63,9 @@ export default [...vitestConfig];
 
 ## React Version
 
-`@skyscanner/eslint-config-skyscanner` will try to detect automatically the version of React installed.
+`@skyscanner/eslint-config-skyscanner` supports React `18.3.1 - 19.2.5`.
+
+It will try to detect automatically the version of React installed.
 
 If your project doesn't use React, or it is not installed in the same `package.json` as `@skyscanner/eslint-config-skyscanner`, you can set it manually:
 
@@ -73,7 +77,7 @@ export default [
   {
     settings: {
       react: {
-        version: '18.2',
+        version: '18.3',
       },
     },
   },
